@@ -10,3 +10,6 @@ function loadScript(url) {
   script.type = 'text/javascript';
   script.src = url;
 };
+
+https://teratail.com/questions/41023
+https://teratail.com/questions/45828

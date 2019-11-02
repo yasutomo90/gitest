@@ -1,10 +1,11 @@
-var radioName, radioId, radioValue;
+var input, label, radioBotan, radioName, radioId, radioValue, radioTitle;
 function createRadio() {
-  var input = document.createElement("input");
+  input = document.createElement("input");
   input.id = radioId;
   input.value = radioValue;
   input.type = radio;
-  var label = document.createElement("label");
+  label = document.createElement("label");
   label.for = raidoId;
-  var radioBotan = input + label;
+  label.innerText = radioTitle;
+  radioBotan = input + label;
 }

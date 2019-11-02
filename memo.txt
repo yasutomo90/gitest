@@ -4,3 +4,9 @@ https://javascript.step-learn.com/contents/J101-createelement.html
 http://www9.plala.or.jp/oyoyon/html/script/append.html
 https://qiita.com/kouh/items/dfc14d25ccb4e50afe89
 https://fantastech.net/onclick-ivent
+
+function loadScript(url) {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = url;
+};

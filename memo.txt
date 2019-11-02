@@ -1,3 +1,6 @@
 https://qiita.com/amamamaou/items/624c22adec32515e863b
 http://mitsuakikawamorita.com/blog/?p=254
 https://javascript.step-learn.com/contents/J101-createelement.html
+http://www9.plala.or.jp/oyoyon/html/script/append.html
+https://qiita.com/kouh/items/dfc14d25ccb4e50afe89
+https://fantastech.net/onclick-ivent

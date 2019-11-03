@@ -14,3 +14,19 @@ function loadScript(url) {
 https://teratail.com/questions/41023
 https://teratail.com/questions/45828
 https://blog.mmmcorp.co.jp/blog/2016/10/20/input_date_style/
+
+https://www.nishishi.com/javascript-tips/radiobutton-alloff.html
+<form name="sample">
+   <p>
+      <label><input type="radio" name="rb" value="r1">ラジオボタン1</label><br>
+      <label><input type="radio" name="rb" value="r2">ラジオボタン2</label><br>
+      <label><input type="radio" name="rb" value="r3">ラジオボタン3</label><br>
+   </p>
+   <p><input type="button" value="どれも選択しない" onclick="offradio();"></p>
+</form>
+function offradio() {
+   var ElementsCount = document.sample.elements.length; // ラジオボタンの数
+   for( i=0 ; i<ElementsCount ; i++ ) {
+      document.sample.elements[i].checked = false;
+   }
+}

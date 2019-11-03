@@ -11,5 +11,4 @@ function createRadio(targetId, radioName, radioId, radioValue) {
   var target = document.getElementById(targetId);
   target.appendChild(input);
   target.appendChild(label);
-  target.appendChild("<br>");
 }

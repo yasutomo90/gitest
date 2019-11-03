@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="main_div"></div>
+  </body>
+  <script>
+    var values = ["aaa", "bbb"];
+    create_radio(values);
+
+    function create_radio(values) {
+      var main_div = document.getElementById("main_div");
+      for (var i = 0; i < values.length; i++) {
+        var radio = document.createElement("input");
+        var label = document.createElement("label");
+        var br = document.createElement("br");
+        var id = "main_div_radio" + i;
+        var name = "group1";
+        var value = values[i];
+        radio.setAttribute("type", "radio");
+        radio.setAttribute("value", value);
+        radio.setAttribute("id", id);
+        radio.setAttribute("name", name);
+        label.setAttribute("for", id);
+        label.innerHTML = value;
+
+        if (value == "aaa") {
+          radio.checked = true;
+        }
+
+        radio.onclick = function() {
+          alert(this.value);
+        };
+
+        main_div.appendChild(br);
+        main_div.appendChild(radio);
+        main_div.appendChild(label);
+      }
+    }
+  </script>
+</html>

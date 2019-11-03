@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <script type="text/javascript" src="click2.js"></script>
     <script type="text/javascript" src="click5.js"></script>
+    <script type="text/javascript" src="cleateElement.js"></script>
   </head>
 
   <body>
     <h1>テスト</h1>
-    <input type="radio" name="PC" id="PC" value="PC" onclick="click2()" /><label
-      for="PC"
-      >PC</label
-    >
-    <div id="dti1"></div>
+    <input
+      type="button"
+      name="PC"
+      id="PC"
+      value="PC"
+      onclick="createRadio(testName)"
+    />
+    <div id="target"></div>
   </body>
 </html>

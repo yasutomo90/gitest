@@ -5,16 +5,29 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <script type="text/javascript" src="cleateElement.js"></script>
+    <script>
+      //document.getElementById("cal").onchange =
+      function testCheck() {
+        var date = document.getElementById("cal").value;
+        document.getElementById("ttt").innerHTML = date;
+      }
+    </script>
   </head>
   <body>
     <h1>テスト</h1>
-    <input
-      type="button"
-      name="PC"
-      id="PC"
-      value="PC"
-      onclick="createRadio('target','test1','taet2','テスト')"
-    />
-    <form id="target"></form>
+    <form>
+      <input
+        type="button"
+        name="PC"
+        id="PC"
+        value="PC"
+        onclick="createRadio('target','test1','taet2','テスト')"
+      />
+      <input type="date" name="cal" id="cal" />
+    </form>
+    <form id="target">
+      <input type="button" value="tets" onclick="testCheck" />
+    </form>
+    <p id="ttt"></p>
   </body>
 </html>

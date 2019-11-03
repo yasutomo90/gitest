@@ -13,3 +13,4 @@ function loadScript(url) {
 
 https://teratail.com/questions/41023
 https://teratail.com/questions/45828
+https://blog.mmmcorp.co.jp/blog/2016/10/20/input_date_style/

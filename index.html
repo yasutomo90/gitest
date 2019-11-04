@@ -5,13 +5,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <script type="text/javascript" src="cleateElement.js"></script>
-    <script>
-      //document.getElementById("cal").onchange =
-      function testCheck() {
-        var date = document.getElementById("cal").value;
-        document.getElementById("ttt").innerHTML = date;
-      }
-    </script>
+    <script type="text/javascript" src="getTxt.js"></script>
   </head>
   <body>
     <h1>テスト</h1>
@@ -25,9 +19,14 @@
       />
       <input type="date" name="cal" id="cal" />
     </form>
-    <form id="target">
-      <input type="button" value="tets" onclick="testCheck()" />
+    <form id="box">
+      <input required type="tel" name="tel" id="tel" placeholder="tel" />
+      <b>tel</b>
+      <input type="text" id="txted" placeholder="text" />
+      <input type="button" value="tete" onclick="getTxt()" />
+      <input type="button" value="tedate" onclick="getdates()" />
+      <input type="submit" value="d" />
     </form>
-    <p id="ttt"></p>
+    <form id="target"></form>
   </body>
 </html>

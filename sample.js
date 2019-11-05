@@ -36,13 +36,6 @@ function getValue() {
   document.getElementById("sentenceArea").value = sentence;
 }
 
-//クリップボードにコピー
-function copyClipBoad() {
-  var copyText = document.getElementById("sentenceArea");
-  copyText.select();
-  document.execCommand("copy");
-}
-
 //入力された内容をすべてクリア
 function clearContent() {
   var ElementsCount = document.sentenceForm.elements.length;

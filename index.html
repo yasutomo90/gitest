@@ -4,8 +4,10 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="cal.css" type="text/css" />
     <script type="text/javascript" src="cleateElement.js"></script>
     <script type="text/javascript" src="getTxt.js"></script>
+    <script type="text/javascript" src="copyClipBoad.js"></script>
   </head>
   <body>
     <h1>テスト</h1>
@@ -17,16 +19,21 @@
         value="PC"
         onclick="createRadio('target','test1','taet2','テスト')"
       />
-      <input type="date" name="cal" id="cal" />
+      <label class="boxlabel"> <input type="date" name="cal" id="cal"/></label>
     </form>
     <form id="box">
       <input required type="tel" name="tel" id="tel" placeholder="tel" />
       <b>tel</b>
-      <input type="text" id="txted" placeholder="text" />
+      <label clas="boxlabel"
+        ><input type="text" id="txted" placeholder="text"
+      /></label>
       <input type="button" value="tete" onclick="getTxt()" />
       <input type="button" value="tedate" onclick="getdates()" />
       <input type="submit" value="d" />
+      <input type="button" value="copy" onclick="copyClipBoad()" />
+      <button id="js_reset">jsのreset()</button>
     </form>
+    <textarea name="textindex" id="sentenceArea" cols="30" rows="10"></textarea>
     <form id="target"></form>
   </body>
 </html>

@@ -1,4 +1,4 @@
-function createRadio(targetId, radioName, radioId, radioValue) {
+function createRadio(radioName, radioId, radioValue) {
   var input = document.createElement("input");
   input.setAttribute("type", "radio");
   input.setAttribute("name", radioName);
@@ -8,7 +8,7 @@ function createRadio(targetId, radioName, radioId, radioValue) {
   label.setAttribute("name", radioName);
   label.setAttribute("for", radioName);
   label.innerHTML = radioValue;
-  var target = document.getElementById(targetId);
+  var target = document.getElementById("target");
   target.appendChild(input);
   target.appendChild(label);
 }

@@ -1,5 +1,3 @@
-var flag = 0;
-
 document.addEventListener("DOMContentLoaded", function () {
   var rent = document.getElementById("btn1");
   rent.addEventListener("click", rental);
@@ -13,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
   canc.addEventListener("click", cancel);
   var oth = document.getElementById("btn6");
   oth.addEventListener("click", other);
+  var createHiss = document.getElementById("createHis");
+  createHiss.addEventListener("click", createHistory);
 }, false);
 
 function rental() {

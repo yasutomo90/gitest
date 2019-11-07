@@ -1,6 +1,6 @@
-function createRadio(radioName, radioId, radioValue) {
+function createBtn(btnType, radioName, radioId, radioValue) {
   var input = document.createElement("input");
-  input.setAttribute("type", "radio");
+  input.setAttribute("type", btnType);
   input.setAttribute("name", radioName);
   input.setAttribute("id", radioId);
   input.setAttribute("value", radioValue);

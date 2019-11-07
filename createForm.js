@@ -3,30 +3,28 @@ var flag = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
   var rent = document.getElementById("btn1");
-  rent.addEventListener("click", function () {
-    //function createRadio( radioName, radioId, radioValue)
-    var flag = 1;
-    var target = document.getElementById("target");
-    target.innerHTML = "";
+  rent.addEventListener("click", radio1());
+}, false);
 
-    createRadio("payment", "pay1", "phone");
-    createRadio("payment", "pay2", "card");
-    createRadio("payment", "pay3", "bank");
+function radio1() {
+  var target = document.getElementById("target");
+  target.innerHTML = "";
 
-    createBr("target");
+  createBtn("radio", "payment", "pay1", "phone");
+  createBtn("radio", "payment", "pay2", "card");
+  createBtn("radio", "payment", "pay3", "bank");
 
-    createRadio("after", "afterY", "yes");
-    createRadio("after", "afterN", "no");
+  createBr("target");
 
-    createBr("target");
+  createBtn("radio", "after", "afterY", "yes");
+  createBtn("radio", "after", "afterN", "no");
 
-    createRadio("send", "send", "send");
+  createBr("target");
 
-    createBr("target");
+  createBtn("checkbox", "send", "send", "send");
 
-    createRadio("caution", "caution", "caution");
+  createBr("target");
 
-  });
-},
-  false
-);
+  createBtn("checkbox", "caution", "caution", "caution");
+
+}

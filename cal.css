@@ -1,6 +1,9 @@
 body{
   background-color:#999;
 }
+#target{
+  min-height:20em ;
+}
 .boxlabel {
   position: relative;
   display: inline-block;

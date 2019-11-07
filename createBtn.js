@@ -6,7 +6,7 @@ function createBtn(btnType, radioName, radioId, radioValue) {
   input.setAttribute("value", radioValue);
   var label = document.createElement("label");
   label.setAttribute("name", radioName);
-  label.setAttribute("for", radioName);
+  label.setAttribute("for", radioId);
   label.innerHTML = radioValue;
   var target = document.getElementById("target");
   target.appendChild(input);

@@ -1,10 +1,12 @@
 body{
-  background-color:#999;
+  
+  color:#62ff97;
+  background-color:#c4ffd3;
 }
 #target{
   min-height:20em ;
 }
-.boxlabel {
+.calBox {
   position: relative;
   display: inline-block;
   width: 200px;
@@ -21,7 +23,7 @@ input[type="date"] {
   background: transparent;
   box-sizing: border-box;
   font-size: 14px;
-  color: #999;
+  color: #777;
 }
 input[type="date"]::-webkit-inner-spin-button {
   -webkit-appearance: none;

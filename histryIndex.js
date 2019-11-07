@@ -1,4 +1,3 @@
-function createHistory(){
-    
+function createHistory() {
+  var histry = [];
 }
-var histry = [];

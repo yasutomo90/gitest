@@ -30,8 +30,8 @@ function visit() {
 
 function rentalVisit() {
   blankForm(3);
-  choice1();
   choice2();
+  choice1();
   console.log(flag);
 }
 
@@ -52,7 +52,6 @@ function cancel() {
 function other() {
   blankForm(6);
   var target = document.getElementById("target");
-  target.innerHTML = "<p>SMSについて</p><p>窓口１</p><p>窓口２</p><p>窓口３</p>";
-
+  choice6();
   console.log(flag);
 }

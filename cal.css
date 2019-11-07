@@ -24,7 +24,7 @@ input[type="text"]  {
   background: transparent;
   box-sizing: border-box;
   font-size: 14px;
-  color: #777;
+  color: #555;
 }
 input[type="date"]::-webkit-inner-spin-button {
   -webkit-appearance: none;

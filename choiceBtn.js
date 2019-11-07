@@ -18,3 +18,14 @@ function choice2() {
     createTxtBox("text", "testt");
     createBr("target");
 }
+
+function choice6() {
+    createBtn("radio", "others", "otherSms", "otherSms");
+    createBr("target");
+    createBtn("radio", "others", "otherCos", "otherCos");
+    createBr("target");
+    createBtn("radio", "others", "otherTec", "otherTec");
+    createBr("target");
+    createBtn("radio", "others", "otherEle", "otherEle");
+    createBr("target");
+}

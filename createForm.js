@@ -33,8 +33,9 @@ function rental() {
 
 function visit() {
   blankForm(2);
-  var tango = document.getElementById("target");
-  tango.innerHTML = '<label class="calBox"> <input type="date" name="cal" id="cal" /></label>';
+  
+  createCal();
+
   console.log(flag);
 }
 

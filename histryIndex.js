@@ -1,0 +1,4 @@
+function createHistory(){
+    
+}
+var histry = [];

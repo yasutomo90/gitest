@@ -1,4 +1,3 @@
-var histry = [];
 var flag = 0;
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -1,3 +1,4 @@
+
 function choice1() {
     createBtn("radio", "payment", "pay1", "phone");
     createBtn("radio", "payment", "pay2", "card");
@@ -11,14 +12,20 @@ function choice1() {
     createBtn("checkbox", "caution", "caution", "caution");
     createBr("target");
 }
-
 function choice2() {
     createCal();
     createBr("target");
     createTxtBox("text", "testt");
     createBr("target");
 }
-
+function choice4() {
+    var target = document.getElementById("target");
+    target.innerHTML = "<p>交換対応について</p>";
+}
+function choice5() {
+    var target = document.getElementById("target");
+    target.innerHTML = "<p>解約について</p>";
+}
 function choice6() {
     createBtn("radio", "others", "otherSms", "otherSms");
     createBr("target");

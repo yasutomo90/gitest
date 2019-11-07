@@ -19,39 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
 function rental() {
   blankForm(1);
   choice1();
-  console.log(flag);
 }
-
 function visit() {
   blankForm(2);
   choice2();
-  console.log(flag);
 }
-
 function rentalVisit() {
   blankForm(3);
   choice2();
   choice1();
-  console.log(flag);
 }
-
 function changeRooter() {
   blankForm(4);
-  var target = document.getElementById("target");
-  target.innerHTML = "<p>交換対応について</p>";
-  console.log(flag);
+  choice4();
 }
-
 function cancel() {
   blankForm(5);
-  var target = document.getElementById("target");
-  target.innerHTML = "<p>解約について</p>";
-  console.log(flag);
+  choice5();
 }
-
 function other() {
   blankForm(6);
-  var target = document.getElementById("target");
   choice6();
-  console.log(flag);
 }

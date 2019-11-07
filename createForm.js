@@ -18,43 +18,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function rental() {
   blankForm(1);
-  createBtn("radio", "payment", "pay1", "phone");
-  createBtn("radio", "payment", "pay2", "card");
-  createBtn("radio", "payment", "pay3", "bank");
-  createBr("target");
-  createBtn("radio", "after", "afterY", "yes");
-  createBtn("radio", "after", "afterN", "no");
-  createBr("target");
-  createBtn("checkbox", "send", "send", "send");
-  createBr("target");
-  createBtn("checkbox", "caution", "caution", "caution");
+  choice1();
   console.log(flag);
 }
 
 function visit() {
   blankForm(2);
-  
-  createCal();
-
+  choice2();
   console.log(flag);
 }
 
 function rentalVisit() {
   blankForm(3);
+  choice1();
+  choice2();
   console.log(flag);
 }
 
 function changeRooter() {
   blankForm(4);
+  var target = document.getElementById("target");
+  target.innerHTML = "<p>交換対応について</p>";
   console.log(flag);
 }
 
 function cancel() {
   blankForm(5);
+  var target = document.getElementById("target");
+  target.innerHTML = "<p>解約について</p>";
   console.log(flag);
 }
 
 function other() {
   blankForm(6);
+  var target = document.getElementById("target");
+  target.innerHTML = "<p>SMSについて</p><p>窓口１</p><p>窓口２</p><p>窓口３</p>";
+
   console.log(flag);
 }

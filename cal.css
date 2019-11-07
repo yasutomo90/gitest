@@ -1,7 +1,7 @@
 body{
   
   color:#62ff97;
-  background-color:#000;
+  background-color:#fff ;
 }
 #target{
   min-height:20em ;
@@ -14,7 +14,8 @@ body{
   border: 2px solid #ccc;
   border-radius: 15px;
 }
-input[type="date"] {
+input[type="date"],
+input[type="text"]  {
   position: relative;
   padding: 0 10px;
   width: 200px;

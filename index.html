@@ -4,35 +4,27 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="style.css" type="text/css" />
   <link rel="stylesheet" href="cal.css" type="text/css" />
-  <script type="text/javascript" src="cleateElement.js"></script>
-  <script type="text/javascript" src="getTxt.js"></script>
-  <script type="text/javascript" src="copyClipBoad.js"></script>
+  <script type="text/javascript" src="choiceBtn.js"></script>
+  <script type="text/javascript" src="createElements.js"></script>
+  <script type="text/javascript" src="createForm.js"></script>
 </head>
 
 <body>
   <h1>テ</h1>
-
-  <form>
-    <input type="button" name="PC" id="PC" value="PC" onclick="createRadio('target','test1','taet2','テスト')" />
-    <label class="calBox"> <input type="date" name="cal" id="cal" /></label>
+  <form id="topform">
+    <label><input type="radio" name="form1" id="btn1" value="btn1" />ボタン1</label>
+    <label><input type="radio" name="form1" id="btn2" value="btn2" />ボタン2</label>
+    <label><input type="radio" name="form1" id="btn3" value="btn3" />ボタン3</label>
+    <label><input type="radio" name="form1" id="btn4" value="btn4" />ボタン4</label>
+    <label><input type="radio" name="form1" id="btn5" value="btn5" />ボタン5</label>
+    <label><input type="radio" name="form1" id="btn6" value="btn6" />ボタン6</label>
   </form>
-
-  <form id="box">
-    <input required type="tel" name="tel" id="tel" placeholder="tel" />
-    <b>tel</b>
-    <label clas="boxlabel"><input type="text" id="txted" placeholder="text" /></label>
-    <input type="button" value="tete" onclick="getTxt()" />
-    <input type="button" value="tedate" onclick="getdates()" />
-    <input type="submit" value="d" />
-    <input type="button" value="copy" onclick="copyClipBoad()" />
-    <button id="js_reset">jsのreset()</button>
-  </form>
-
-  <textarea name="textindex" id="sentenceArea" cols="30" rows="10"></textarea>
-
   <form id="target"></form>
+  <form>
+    <textarea name="memoBox" id="memoBox" cols="50" rows="6" placeholder="履歴追記用"></textarea>
+    <textarea name="historyBox" id="historyBox" cols="50" rows="12" placeholder="ここに履歴が出るよ"></textarea>
+  </form>
 </body>
 
 </html>

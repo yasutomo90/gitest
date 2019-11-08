@@ -1,10 +1,15 @@
 function createHistory() {
   switch (flag) {
     case 1:
+      history = ["null"];
+      console.log(history);
       getRadioValue("payment", 1);
       console.log("1だよ");
-      var historyLog = history.join("\r\n");
+      var historyLog = ["test", "test"];
       console.log(historyLog);
+      var hislog = historyLog.join("\r\n");
+      console.log(hislog);
+      console.log(history);
       break;
     case 2:
       console.log("2だよ")

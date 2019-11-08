@@ -1,2 +1,2 @@
-var history = [];
-var flag = 0;
+history = [];
+flag = 0;

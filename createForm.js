@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
   var rent = document.getElementById("btn1");
   rent.addEventListener("click", rental);

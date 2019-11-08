@@ -1,9 +1,10 @@
 function blankForm(fragment) {
   var blankForm = document.getElementById("target");
   blankForm.innerHTML = "";
-  history = [];
+  //history = [];
   flag = fragment;
 }
+
 function createBtn(btnType, radioName, radioId, radioValue) {
   var input = document.createElement("input");
   input.setAttribute("type", btnType);
@@ -18,11 +19,13 @@ function createBtn(btnType, radioName, radioId, radioValue) {
   target.appendChild(input);
   target.appendChild(label);
 }
+
 function createBr(targetId) {
   var br = document.createElement("br");
   var targetBr = document.getElementById(targetId);
   targetBr.appendChild(br);
 }
+
 function createCal() {
   var caLabel = document.createElement("laebel");
   caLabel.setAttribute("class", "calBox");
@@ -42,6 +45,7 @@ function createCal() {
   var dd = ("0" + today.getDate()).slice(-2);
   document.getElementById("cal").value = yyyy + '-' + mm + '-' + dd;
 }
+
 function createTxtBox(boxType, boxName) {
   var br = document.createElement("br");
   var caLabel = document.createElement("laebel");

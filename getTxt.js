@@ -1,4 +1,4 @@
-function getTxt() {
-  var tango = document.getElementById("target");
-  tango.innerText = document.forms.box.txted.value;
+function getTxt(target, j) {
+  var tango = document.getElementById(target);
+  hLogs[j] = tango.value;
 }

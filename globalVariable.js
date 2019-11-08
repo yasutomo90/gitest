@@ -1,2 +1,2 @@
-history = [];
+hLogs = [];
 flag = 0;

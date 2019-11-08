@@ -15,7 +15,7 @@ function choice1() {
 function choice2() {
   createCal();
   createBr("target");
-  createTxtBox("time", "hopeTime");
+  selectTime();
   createTxtBox("text", "tel");
   createBr("target");
 }

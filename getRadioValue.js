@@ -1,4 +1,4 @@
-function getRadioValue(name) {
+function getRadioValue(name, j) {
   //ラジオボタンオブジェクトを取得する
   var radios = document.getElementsByName(name);
 
@@ -13,10 +13,10 @@ function getRadioValue(name) {
   }
   //value値を表示する
   //document.getElementById("result").innerHTML = result;
-  document.write(result);
+  history[j] = result;
 }
 
 //date型の値を取得
-document.getElementById("cal").onchange = function () {
-  var date = document.getElementById("cal").value;
-};
+//document.getElementById("cal").onchange = function () {
+//  var date = document.getElementById("cal").value;
+//};

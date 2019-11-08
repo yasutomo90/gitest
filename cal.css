@@ -1,21 +1,23 @@
-body{
-  
-  color:#62ff97;
-  background-color:#fff ;
+body {
+  color: #555;
+  background-color: rgb(190, 190, 190);
 }
-#target{
-  min-height:20em ;
+
+#target {
+  min-height: 20em;
 }
+
 .calBox {
   position: relative;
   display: inline-block;
   width: 200px;
   height: 36px;
-  border: 2px solid #ccc;
+  border: 4px solid #fff;
   border-radius: 15px;
 }
+
 input[type="date"],
-input[type="text"]  {
+input[type="text"] {
   position: relative;
   padding: 0 10px;
   width: 200px;
@@ -26,12 +28,15 @@ input[type="text"]  {
   font-size: 14px;
   color: #555;
 }
+
 input[type="date"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
 input[type="date"]::-webkit-clear-button {
   -webkit-appearance: none;
 }
+
 input[type="date"]::-webkit-calendar-picker-indicator {
   position: absolute;
   width: 100%;

@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
   var rent = document.getElementById("btn1");
   rent.addEventListener("click", rental);
@@ -19,23 +21,28 @@ function rental() {
   blankForm(1);
   choice1();
 }
+
 function visit() {
   blankForm(2);
   choice2();
 }
+
 function rentalVisit() {
   blankForm(3);
   choice2();
   choice1();
 }
+
 function changeRooter() {
   blankForm(4);
   choice4();
 }
+
 function cancel() {
   blankForm(5);
   choice5();
 }
+
 function other() {
   blankForm(6);
   choice6();

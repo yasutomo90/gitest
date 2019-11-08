@@ -33,3 +33,6 @@ function offradio() {
 https://kodocode.net/design-css-textbox/
 
 radioのvalueを履歴ログの内容に変える
+createBtn(btnType, radioName, radioId, radioValue)
+↓
+createBtn(btnType, radioName, radioId, displayName,radioValue)

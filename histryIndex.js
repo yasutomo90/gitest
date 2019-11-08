@@ -6,31 +6,65 @@ function createHistory() {
       getRadioValue("after", 2);
       getRadioValue("send", 3);
       getRadioValue("caution", 4);
+      histryChk();
       console.log("1だよ");
-      console.log(hLogs.join("\r\n"));
+      console.log(hLogEx.join("\r\n"));
+      hLogEx = [];
       break;
 
     case 2:
-      console.log("2だよ")
+      getTxt("memoBox", 0);
+      getTxt("cal", 1);
+      getTxt("timeSelect", 2);
+      getTxt("tel", 3);
+      histryChk();
+      console.log("2だよ");
+      console.log(hLogEx.join("\r\n"));
+      hLogEx = [];
       break;
 
     case 3:
-      console.log("3だよ")
+      getTxt("memoBox", 0);
+      getTxt("cal", 1);
+      getTxt("timeSelect", 2);
+      getTxt("tel", 3);
+      getTxt("memoBox", 4);
+      getRadioValue("payment", 5);
+      getRadioValue("after", 6);
+      getRadioValue("send", 7);
+      getRadioValue("caution", 8);
+      histryChk();
+      console.log("3だよ");
+      console.log(hLogEx.join("\r\n"));
+      hLogEx = [];
       break;
 
     case 4:
-      console.log("4だよ")
+      getTxt("memoBox", 0);
+      histryChk();
+      console.log("4だよ");
+      console.log(hLogEx.join("\r\n"));
+      hLogEx = [];
       break;
 
     case 5:
-      console.log("5だよ")
+      getTxt("memoBox", 0);
+      histryChk();
+      console.log("5だよ");
+      console.log(hLogEx.join("\r\n"));
+      hLogEx = [];
       break;
 
     case 6:
-      console.log("6だよ")
+      getTxt("memoBox", 0);
+      getRadioValue("others", 1);
+      histryChk();
+      console.log("6だよ");
+      console.log(hLogEx.join("\r\n"));
+      hLogEx = [];
       break;
 
     default:
-      console.log("違うよ")
+      console.log("違うよ");
   }
 }

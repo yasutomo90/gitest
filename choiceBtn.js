@@ -13,9 +13,11 @@ function choice1() {
 }
 
 function choice2() {
-  createCal();
+  createBtn("checkbox", "homeDate", "homeDate", "希望有");
   createBr("target");
+  createCal();
   selectTime();
+  createBr("target");
   createTxtBox("text", "tel");
   createBr("target");
 }

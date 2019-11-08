@@ -9,8 +9,3 @@ function getRadioValue(name, j) {
     }
   }
 }
-
-//date型の値を取得
-//document.getElementById("cal").onchange = function () {
-//  var date = document.getElementById("cal").value;
-//};

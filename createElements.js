@@ -1,8 +1,11 @@
 function blankForm(fragment) {
   var blankForm = document.getElementById("target");
+  var eraseMemo = document.getElementById("memoBox");
   blankForm.innerHTML = "";
+  eraseMemo.value = "";
   hLogs = [];
   flag = fragment;
+  histryChk();
 }
 
 function createBtn(btnType, radioName, radioId, radioValue) {
@@ -76,4 +79,10 @@ function createTimeBox(boxType, boxName) {
   TxtBox.setAttribute("id", boxName);
   var tang = document.getElementById("txtLabel");
   tang.appendChild(TxtBox);
+}
+
+function copyClipBoad() {
+  var copyText = document.getElementById("sentenceArea");
+  copyText.select();
+  document.execCommand("copy");
 }

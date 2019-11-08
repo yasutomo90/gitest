@@ -46,4 +46,12 @@ function histryChk() {
             j++;
         }
     }
+    var target = document.getElementById("historyBox");
+    target.value = hLogEx.join("\r\n");
+}
+
+function copyClipBoad() {
+    var copyText = document.getElementById("historyBox");
+    copyText.select();
+    document.execCommand("copy");
 }

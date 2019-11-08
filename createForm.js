@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
   oth.addEventListener("click", other);
   var createHiss = document.getElementById("createHis");
   createHiss.addEventListener("click", createHistory);
+  var createHiss = document.getElementById("coppyHistory");
+  createHiss.addEventListener("click", copyClipBoad);
+  var createHiss = document.getElementById("eraseAll");
+  createHiss.addEventListener("click", blankForm);
 }, false);
 
 function rental() {

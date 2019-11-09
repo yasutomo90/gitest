@@ -3,13 +3,17 @@ body {
   background-color: rgb(190, 190, 190);
 }
 
+label {
+  margin: 10px;
+}
+
 #target {
   min-height: 20em;
 }
 
 input[type="date"],
 input[type="time"],
-input[type="text"],
+input[type="tel"],
 #timeSelect {
   position: relative;
   padding: 0 10px;

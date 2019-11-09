@@ -36,3 +36,6 @@ radioのvalueを履歴ログの内容に変える
 createBtn(btnType, radioName, radioId, radioValue)
 ↓
 createBtn(btnType, radioName, radioId, displayName,radioValue)
+
+var elem = document.getElementById("elemID");
+elem.parentNode.removeChild(elem);

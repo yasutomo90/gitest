@@ -8,16 +8,25 @@ function blankForm(fragment) {
   histryChk();
 }
 
-function createBtn(btnType, radioName, radioId, radioValue) {
+function allReset() {
+  var ElementsCount = document.getElementsByName("form1");
+  for (i = 0; i < ElementsCount.length; i++) {
+    ElementsCount[i].checked = false;
+  }
+  blankForm(0);
+}
+
+function createBtn(btnType, radioName, radioId, displayName, clickOn, radioValue) {
   var input = document.createElement("input");
   input.setAttribute("type", btnType);
   input.setAttribute("name", radioName);
   input.setAttribute("id", radioId);
   input.setAttribute("value", radioValue);
+  input.setAttribute("onclick", clickOn);
   var label = document.createElement("label");
   label.setAttribute("name", radioName);
   label.setAttribute("for", radioId);
-  label.innerHTML = radioValue;
+  label.innerHTML = displayName;
   var target = document.getElementById("target");
   target.appendChild(input);
   target.appendChild(label);
@@ -49,7 +58,7 @@ function createCal() {
   document.getElementById("cal").value = yyyy + '-' + mm + '-' + dd;
 }
 
-function createTxtBox(boxType, boxName) {
+function createTxtBox(boxType, boxName, boxValue) {
   var br = document.createElement("br");
   var caLabel = document.createElement("laebel");
   caLabel.setAttribute("class", "calBox");
@@ -61,6 +70,7 @@ function createTxtBox(boxType, boxName) {
   TxtBox.setAttribute("type", boxType);
   TxtBox.setAttribute("name", boxName);
   TxtBox.setAttribute("id", boxName);
+  TxtBox.setAttribute("placeholder", boxValue);
   var tang = document.getElementById("txtLabel");
   tang.appendChild(TxtBox);
 }

@@ -5,7 +5,8 @@ function createHistory() {
       getRadioValue("payment", 1);
       getRadioValue("after", 2);
       getRadioValue("send", 3);
-      getRadioValue("caution", 4);
+      getRadioValue("sending", 4);
+      getRadioValue("caution", 5);
       histryChk();
       console.log("1だよ");
       console.log(hLogEx.join("\r\n"));
@@ -32,7 +33,8 @@ function createHistory() {
       getRadioValue("payment", 5);
       getRadioValue("after", 6);
       getRadioValue("send", 7);
-      getRadioValue("caution", 8);
+      getRadioValue("sending", 8);
+      getRadioValue("caution", 9);
       histryChk();
       console.log("3だよ");
       console.log(hLogEx.join("\r\n"));
@@ -41,6 +43,7 @@ function createHistory() {
 
     case 4:
       getTxt("memoBox", 0);
+      getTxt("changing", 1);
       histryChk();
       console.log("4だよ");
       console.log(hLogEx.join("\r\n"));

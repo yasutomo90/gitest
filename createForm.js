@@ -15,8 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
   createHiss.addEventListener("click", createHistory);
   var createHiss = document.getElementById("coppyHistory");
   createHiss.addEventListener("click", copyClipBoad);
-  var createHiss = document.getElementById("eraseAll");
-  createHiss.addEventListener("click", blankForm);
 }, false);
 
 function rental() {
@@ -31,8 +29,8 @@ function visit() {
 
 function rentalVisit() {
   blankForm(3);
-  choice2();
   choice1();
+  choice2();
 }
 
 function changeRooter() {

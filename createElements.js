@@ -38,11 +38,11 @@ function createBr(targetId) {
   targetBr.appendChild(br);
 }
 
-function createCal() {
+function createCal(targetId) {
   var caLabel = document.createElement("laebel");
   caLabel.setAttribute("class", "calBox");
   caLabel.setAttribute("id", "caLabel");
-  var tango = document.getElementById("target");
+  var tango = document.getElementById(targetId);
   tango.appendChild(caLabel);
   var calInput = document.createElement("input");
   calInput.setAttribute("type", "date");
@@ -58,12 +58,12 @@ function createCal() {
   document.getElementById("cal").value = yyyy + '-' + mm + '-' + dd;
 }
 
-function createTxtBox(boxType, boxName, boxValue) {
+function createTxtBox(boxType, targetId, boxName, boxValue) {
   var br = document.createElement("br");
   var caLabel = document.createElement("laebel");
   caLabel.setAttribute("class", "calBox");
   caLabel.setAttribute("id", "txtLabel");
-  var tango = document.getElementById("target");
+  var tango = document.getElementById(targetId);
   tango.appendChild(br);
   tango.appendChild(caLabel);
   var TxtBox = document.createElement("input");
@@ -75,24 +75,31 @@ function createTxtBox(boxType, boxName, boxValue) {
   tang.appendChild(TxtBox);
 }
 
-function createTimeBox(boxType, boxName) {
-  var br = document.createElement("br");
-  var caLabel = document.createElement("laebel");
-  caLabel.setAttribute("class", "calBox");
-  caLabel.setAttribute("id", "txtLabel");
-  var tango = document.getElementById("target");
-  tango.appendChild(br);
-  tango.appendChild(caLabel);
-  var TxtBox = document.createElement("input");
-  TxtBox.setAttribute("type", boxType);
-  TxtBox.setAttribute("name", boxName);
-  TxtBox.setAttribute("id", boxName);
-  var tang = document.getElementById("txtLabel");
-  tang.appendChild(TxtBox);
-}
+//function createTimeBox(boxType, boxName) {
+//  var br = document.createElement("br");
+//  var caLabel = document.createElement("laebel");
+//  caLabel.setAttribute("class", "calBox");
+//  caLabel.setAttribute("id", "txtLabel");
+//  var tango = document.getElementById("target");
+//  tango.appendChild(br);
+//  tango.appendChild(caLabel);
+//  var TxtBox = document.createElement("input");
+//  TxtBox.setAttribute("type", boxType);
+//  TxtBox.setAttribute("name", boxName);
+//  TxtBox.setAttribute("id", boxName);
+//  var tang = document.getElementById("txtLabel");
+//  tang.appendChild(TxtBox);
+//}
 
 function copyClipBoad() {
   var copyText = document.getElementById("sentenceArea");
   copyText.select();
   document.execCommand("copy");
+}
+
+function createForm(targetId, formId) {
+  var homeForm = document.createElement("form");
+  homeForm.setAttribute("id", formId);
+  var target = document.getElementById(targetId);
+  target.appendChild(homeForm);
 }

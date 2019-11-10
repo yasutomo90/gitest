@@ -26,15 +26,14 @@ function createHistory() {
 
     case 3:
       getTxt("memoBox", 0);
+        getRadioValue("payment", 4);
+      getRadioValue("after", 5);
+      getRadioValue("send", 6);
+      getRadioValue("sending", 7);
+      getRadioValue("caution", 8);
       getTxt("cal", 1);
       getTxt("timeSelect", 2);
       getTxt("tel", 3);
-      getTxt("memoBox", 4);
-      getRadioValue("payment", 5);
-      getRadioValue("after", 6);
-      getRadioValue("send", 7);
-      getRadioValue("sending", 8);
-      getRadioValue("caution", 9);
       histryChk();
       console.log("3だよ");
       console.log(hLogEx.join("\r\n"));

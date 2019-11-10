@@ -1,8 +1,8 @@
-function selectTime() {
+function selectTime(targetId) {
     var timeSelect = document.createElement("select");
     timeSelect.setAttribute("id", "timeSelect");
     timeSelect.setAttribute("name", "timeSelect");
-    var target = document.getElementById("target");
+    var target = document.getElementById(targetId);
     target.appendChild(timeSelect);
     tango = document.getElementById("timeSelect");
     for (i = 9; i < 22; i++) {

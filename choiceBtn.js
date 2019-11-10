@@ -16,6 +16,8 @@ function choice1() {
 }
 
 function choice2() {
+  createTxtBox("tel", "target", "tel", "TEL:xxx-xxxx-xxxx");
+  createBr("target");
   createBtn("checkbox", "homeDate", "homeDate", "連絡希望有り", "getHome()", "希望有");
   createBr("target");
 }
@@ -24,12 +26,14 @@ function getHome() {
   var chkHope = document.getElementById("homeDate");
   if (chkHope.checked == true) {
     if (document.getElementById("caLabel") == null) {
-      createCal();
-      selectTime();
-      createBr("target");
-      createTxtBox("tel", "tel", "TEL:xxx-xxxx-xxxx");
-      createBr("target");
+      createForm("target", "homeForm");
+      createCal("homeForm");
+      selectTime("homeForm");
+      createBr("homeForm");
     }
+  } else {
+    var elem = document.getElementById("homeForm");
+    elem.parentNode.removeChild(elem);
   }
 }
 

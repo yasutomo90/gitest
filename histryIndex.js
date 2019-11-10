@@ -15,9 +15,19 @@ function createHistory() {
 
     case 2:
       getTxt("memoBox", 0);
-      getTxt("cal", 1);
-      getTxt("timeSelect", 2);
       getTxt("tel", 3);
+      //if(hLogsがからじゃなかったら)"文字列"+hLogs
+      if (hLogs[3] != "") {
+        hLogs[3] = "連絡先：" + hLogs[3];
+      }
+      getTxt("cal", 1);
+      if (document.getElementById("caLabel") != null) {
+        hLogs[1] = "連絡希望日　" + hLogs[1];
+      }
+      getTxt("timeSelect", 2);
+      if (document.getElementById("timeSelect") != null) {
+        hLogs[2] = "連絡希望時間　" + hLogs[2] + "頃";
+      }
       histryChk();
       console.log("2だよ");
       console.log(hLogEx.join("\r\n"));
@@ -26,7 +36,7 @@ function createHistory() {
 
     case 3:
       getTxt("memoBox", 0);
-        getRadioValue("payment", 4);
+      getRadioValue("payment", 4);
       getRadioValue("after", 5);
       getRadioValue("send", 6);
       getRadioValue("sending", 7);

@@ -35,15 +35,19 @@ function getRadioValue(name, j) {
 
 function getTxt(target, j) {
     var tango = document.getElementById(target);
-    hLogs[j] = tango.value;
+    if (document.getElementById(target) != null) {
+        hLogs[j] = tango.value;
+    }
 }
 
 function histryChk() {
     var j = 0;
     for (var i = 0; i < hLogs.length; i++) {
-        if (hLogs[i] != "") {
-            hLogEx[j] = hLogs[i];
-            j++;
+        if (hLogs[i] != null) {
+            if (hLogs[i] != "") {
+                hLogEx[j] = hLogs[i];
+                j++;
+            }
         }
     }
     var target = document.getElementById("historyBox");

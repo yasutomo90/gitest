@@ -3,7 +3,8 @@ body {
   background-color: rgb(190, 190, 190);
 }
 
-label {
+label,
+P {
   margin: 10px;
 }
 
@@ -14,6 +15,7 @@ label {
 input[type="date"],
 input[type="time"],
 input[type="tel"],
+input[type="text"],
 #timeSelect {
   position: relative;
   padding: 0 10px;

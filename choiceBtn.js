@@ -18,6 +18,8 @@ function choice1() {
 function choice2() {
   createTxtBox("tel", "target", "tel", "TEL:xxx-xxxx-xxxx");
   createBr("target");
+  createTxtBox("text", "target", "gog", "gog");
+  createBr("target");
   createBtn("checkbox", "homeDate", "homeDate", "連絡希望有り", "getHome()", "希望有");
   createBr("target");
 }
@@ -40,23 +42,47 @@ function getHome() {
 function choice4() {
   var target = document.getElementById("target");
   target.innerHTML = "<p>交換対応について</p>";
-  createBtn("checkbox", "changing", "changing", "交換OK", "", "交換OKテキスト");
+  createTxtBox("text", "target", "symptoms", "症状");
   createBr("target");
-
+  createBtn("radio", "broken", "brokenTec", "テク", "", "テク判定");
+  createBtn("radio", "broken", "brokenEle", "エレ", "", "エレ判定");
+  createBtn("radio", "broken", "brokenOth", "アザ", "", "アザ判定");
+  createBr("target");
+  createBtn("checkbox", "changing", "changing", "住所OK", "", "住所OKテキスト");
+  createBr("target");
+  createBtn("radio", "fare", "fareY", "運賃OK", "", "運賃OKテキスト");
+  createBtn("radio", "fare", "fareN", "運賃NG", "", "運賃NGテキスト");
 }
 
 function choice5() {
   var target = document.getElementById("target");
   target.innerHTML = "<p>解約について</p>";
+  createBtn("checkbox", "changing", "changing", "住所OK", "", "住所OKテキスト");
+  createBr("target");
+  createBtn("radio", "fare", "fareY", "運賃OK", "", "運賃OKテキスト");
+  createBtn("radio", "fare", "fareN", "運賃NG", "", "運賃NGテキスト");
 }
 
 function choice6() {
-  createBtn("radio", "others", "otherSms", "SMS", "", "SMSテキスト");
-  createBr("target");
-  createBtn("radio", "others", "otherCos", "Cos", "", "Cosテキスト");
-  createBr("target");
-  createBtn("radio", "others", "otherTec", "Tec", "", "Tecテキスト");
-  createBr("target");
-  createBtn("radio", "others", "otherEle", "Ele", "", "Eleテキスト");
-  createBr("target");
+  createBtn("radio", "others", "otherSms", "SMS", "sendSms()", "SMSテキスト");
+  createBtn("radio", "others", "otherCos", "Cos", "sendSms()", "Cosテキスト");
+  createBtn("radio", "others", "otherTec", "Tec", "sendSms()", "Tecテキスト");
+  createBtn("radio", "others", "otherEle", "Ele", "sendSms()", "Eleテキスト");
+}
+
+function sendSms() {
+  var chkHope = document.getElementById("otherSms");
+  if (chkHope.checked == true) {
+    if (document.getElementById("caLabel") == null) {
+      createForm("target", "homeForm");
+      createCal("homeForm");
+      var target = document.getElementById("homeForm");
+      var b = document.createElement("b");
+      b.innerHTML = "：送られた日付";
+      target.appendChild(b);
+    }
+  } else {
+    var elem = document.getElementById("homeForm");
+    elem.parentNode.removeChild(elem);
+  }
 }

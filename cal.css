@@ -1,14 +1,18 @@
 body {
-  color: #555;
-  background-color: rgb(190, 190, 190);
+  color: rgb(140, 255, 184);
+  background-color: rgb(70, 70, 70);
 }
 
-label,
-P {
+P,
+select {
   margin: 10px;
 }
 
-#target {
+.calBox {
+  margin: 0.5em;
+}
+
+. #target {
   min-height: 20em;
 }
 
@@ -52,4 +56,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 100%;
   opacity: 0;
   border-radius: 15px;
+}
+
+input[type="radio"] {
+  display: none;
 }

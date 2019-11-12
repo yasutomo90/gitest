@@ -26,6 +26,7 @@ function createBtn(btnType, radioName, radioId, displayName, clickOn, radioValue
   var label = document.createElement("label");
   label.setAttribute("name", radioName);
   label.setAttribute("for", radioId);
+  label.setAttribute("class", "labeling");
   label.innerHTML = displayName;
   var target = document.getElementById("target");
   target.appendChild(input);
@@ -40,7 +41,8 @@ function createBr(targetId) {
 
 function createCal(targetId) {
   var caLabel = document.createElement("laebel");
-  caLabel.setAttribute("class", "calBox");
+  //caLabel.setAttribute("class", "calBox");
+  caLabel.setAttribute("class", "labeling");
   caLabel.setAttribute("id", "caLabel");
   var tango = document.getElementById(targetId);
   tango.appendChild(caLabel);
@@ -58,20 +60,19 @@ function createCal(targetId) {
   document.getElementById("cal").value = yyyy + '-' + mm + '-' + dd;
 }
 
-function createTxtBox(boxType, targetId, boxName, boxValue) {
-  var br = document.createElement("br");
+function createTxtBox(boxType, txtId, targetId, boxName, boxValue) {
   var caLabel = document.createElement("laebel");
-  caLabel.setAttribute("class", "calBox");
-  caLabel.setAttribute("id", "txtLabel");
+  //caLabel.setAttribute("class", "calBox");
+  caLabel.setAttribute("class", "labeling");
+  caLabel.setAttribute("id", txtId);
   var tango = document.getElementById(targetId);
-  tango.appendChild(br);
   tango.appendChild(caLabel);
   var TxtBox = document.createElement("input");
   TxtBox.setAttribute("type", boxType);
   TxtBox.setAttribute("name", boxName);
   TxtBox.setAttribute("id", boxName);
   TxtBox.setAttribute("placeholder", boxValue);
-  var tang = document.getElementById("txtLabel");
+  var tang = document.getElementById(txtId);
   tang.appendChild(TxtBox);
 }
 

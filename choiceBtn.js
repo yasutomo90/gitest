@@ -16,9 +16,9 @@ function choice1() {
 }
 
 function choice2() {
-  createTxtBox("tel", "target", "tel", "TEL:xxx-xxxx-xxxx");
+  createTxtBox("tel", "telen", "target", "tel", "TEL:xxx-xxxx-xxxx");
   createBr("target");
-  createTxtBox("text", "target", "gog", "gog");
+  createTxtBox("text", "gong", "target", "gog", "gog");
   createBr("target");
   createBtn("checkbox", "homeDate", "homeDate", "連絡希望有り", "getHome()", "希望有");
   createBr("target");
@@ -42,7 +42,7 @@ function getHome() {
 function choice4() {
   var target = document.getElementById("target");
   target.innerHTML = "<p>交換対応について</p>";
-  createTxtBox("text", "target", "symptoms", "症状");
+  createTxtBox("text", "sympy", "target", "symptoms", "症状");
   createBr("target");
   createBtn("radio", "broken", "brokenTec", "テク", "", "テク判定");
   createBtn("radio", "broken", "brokenEle", "エレ", "", "エレ判定");

@@ -41,8 +41,7 @@ function createBr(targetId) {
 
 function createCal(targetId) {
   var caLabel = document.createElement("laebel");
-  //caLabel.setAttribute("class", "calBox");
-  caLabel.setAttribute("class", "labeling");
+  caLabel.setAttribute("class", "calBox");
   caLabel.setAttribute("id", "caLabel");
   var tango = document.getElementById(targetId);
   tango.appendChild(caLabel);
@@ -62,8 +61,7 @@ function createCal(targetId) {
 
 function createTxtBox(boxType, txtId, targetId, boxName, boxValue) {
   var caLabel = document.createElement("laebel");
-  //caLabel.setAttribute("class", "calBox");
-  caLabel.setAttribute("class", "labeling");
+  caLabel.setAttribute("class", "calBox");
   caLabel.setAttribute("id", txtId);
   var tango = document.getElementById(targetId);
   tango.appendChild(caLabel);

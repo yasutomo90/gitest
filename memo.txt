@@ -39,3 +39,7 @@ createBtn(btnType, radioName, radioId, displayName,radioValue)
 
 var elem = document.getElementById("elemID");
 elem.parentNode.removeChild(elem);
+
+
+background-colors
+https://coliss.com/articles/build-websites/operation/css/gradient-background-hue-css.html

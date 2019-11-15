@@ -16,7 +16,7 @@ function allReset() {
   blankForm(0);
 }
 
-function createBtn(btnType, radioName, radioId, displayName, clickOn, radioValue) {
+function createBtn(btnType, targets, radioName, radioId, displayName, clickOn, radioValue) {
   var input = document.createElement("input");
   input.setAttribute("type", btnType);
   input.setAttribute("name", radioName);
@@ -28,7 +28,7 @@ function createBtn(btnType, radioName, radioId, displayName, clickOn, radioValue
   label.setAttribute("for", radioId);
   label.setAttribute("class", "labeling");
   label.innerHTML = displayName;
-  var target = document.getElementById("target");
+  var target = document.getElementById(targets);
   target.appendChild(input);
   target.appendChild(label);
 }

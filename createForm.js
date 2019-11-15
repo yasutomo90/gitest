@@ -29,8 +29,8 @@ function visit() {
 
 function rentalVisit() {
   blankForm(3);
-  choice1();
   choice2();
+  choice1();
 }
 
 function changeRooter() {

@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="cal.css" type="text/css" />
+  <link rel="stylesheet" href="test.css" type="text/css">
   <script type="text/javascript" src="globalVariable.js"></script>
   <script type="text/javascript" src="choiceBtn.js"></script>
   <script type="text/javascript" src="createElements.js"></script>
@@ -14,16 +15,25 @@
 </head>
 
 <body class="saltAndPepper">
-  <h1>テ</h1>
-  <form id="topform">
-    <input type="radio" name="form1" id="btn1" value="btn1" /><label class="labeling" for="btn1">ボタン1</label>
-    <input type="radio" name="form1" id="btn2" value="btn2" /><label class="labeling" for="btn2">ボタン2</label>
-    <input type="radio" name="form1" id="btn3" value="btn3" /><label class="labeling" for="btn3">ボタン3</label>
-    <input type="radio" name="form1" id="btn4" value="btn4" /><label class="labeling" for="btn4">ボタン4</label>
-    <input type="radio" name="form1" id="btn5" value="btn5" /><label class="labeling" for="btn5">ボタン5</label>
-    <input type="radio" name="form1" id="btn6" value="btn6" /><label class="labeling" for="btn6">ボタン6</label>
-  </form>
-  <form id="target"></form>
+  <div id="header">
+    <h1>テ</h1>
+    <form id="topform">
+      <input type="radio" name="form1" id="btn1" value="btn1" /><label class="labeling" for="btn1">ボタン1</label>
+      <input type="radio" name="form1" id="btn2" value="btn2" /><label class="labeling" for="btn2">ボタン2</label>
+      <input type="radio" name="form1" id="btn3" value="btn3" /><label class="labeling" for="btn3">ボタン3</label>
+      <input type="radio" name="form1" id="btn4" value="btn4" /><label class="labeling" for="btn4">ボタン4</label>
+      <input type="radio" name="form1" id="btn5" value="btn5" /><label class="labeling" for="btn5">ボタン5</label>
+      <input type="radio" name="form1" id="btn6" value="btn6" /><label class="labeling" for="btn6">ボタン6</label>
+    </form>
+  </div>
+  <div id="mainContent">
+    <div id="leftContent">
+      <form id="target"></form>
+    </div>
+
+    <div id="rightContent">サイドのやつだよ</div>
+  </div>
+  </div>
   <form id="textForm">
     <textarea name="memoBox" id="memoBox" cols="50" rows="3" placeholder="履歴追記用"></textarea>
     <br>

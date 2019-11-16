@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#target {
+    min-width: 350px;
+}
+
+.header {
+    height: 70px;
+    text-align: center;
+}
+
+#mainContent {
+    /*min-height: 100vh;*/
+    display: flex;
+    margin-top: 10px;
+
+}
+
+#leftContent {
+    flex: 1;
+    margin-left: 10px;
+    width: 300px;
+    border: palevioletred 1px solid;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    border-radius: 15px;
+}
+
+#rightContent {
+    /*width: 300px;*/
+    border: palegreen 2px solid;
+    border-radius: 15px;
+    padding-top: 1em;
+    margin-bottom: 1em;
+}

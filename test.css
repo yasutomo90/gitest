@@ -22,7 +22,7 @@ body {
 #leftContent {
     flex: 1;
     margin-left: 10px;
-    width: 300px;
+    max-width: 400px;
     border: palevioletred 1px solid;
     margin-right: 1em;
     margin-bottom: 1em;

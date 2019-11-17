@@ -16,6 +16,7 @@ body {
     /*min-height: 100vh;*/
     display: flex;
     margin-top: 10px;
+    width: 800px;
 
 }
 
@@ -31,8 +32,10 @@ body {
 
 #rightContent {
     /*width: 300px;*/
-    border: palegreen 2px solid;
+    border: palegreen 1px solid;
     border-radius: 15px;
-    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     margin-bottom: 1em;
+    max-width: 400px;
 }

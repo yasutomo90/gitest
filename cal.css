@@ -90,17 +90,17 @@ input[type="checkbox"]:checked+.labeling {
 
 textarea::placeholder,
 input::placeholder {
-  color: #16A6B6;
+  color: rgb(160, 160, 160);
 }
 
 /* IE */
 textarea:-ms-input-placeholder,
 input:-ms-input-placeholder {
-  color: #16A6B6;
+  color: rgb(160, 160, 160);
 }
 
 /* Edge */
 textarea::-ms-input-placeholder,
 input::-ms-input-placeholder {
-  color: #16A6B6;
+  color: rgb(160, 160, 160);
 }

@@ -1,6 +1,8 @@
 function blankForm(fragment) {
   var blankForm = document.getElementById("target");
   var eraseMemo = document.getElementById("memoBox");
+  var rightTxt = document.getElementById("rightContent");
+  rightTxt.innerHTML = "サイドのやつだよ";
   blankForm.innerHTML = "";
   eraseMemo.value = "";
   hLogs = [];

@@ -1,4 +1,5 @@
 function choice1() {
+  createRightTxt("テストテストテストテスト\r\nテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト");
   createBtn("radio", "target", "payment", "pay1", "phone", "", "phoneのテキスト");
   createBtn("radio", "target", "payment", "pay2", "card", "", "cardのテキスト");
   createBtn("radio", "target", "payment", "pay3", "bank", "", "bankのテキスト");
@@ -89,4 +90,12 @@ function sendSms() {
     var elem = document.getElementById("homeForm");
     elem.parentNode.removeChild(elem);
   }
+}
+
+function createRightTxt(tetext) {
+  var target = document.getElementById("rightContent");
+  target.innerHTML = "";
+  var p = document.createElement("p");
+  p.innerText = tetext;
+  target.appendChild(p);
 }

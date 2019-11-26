@@ -43,3 +43,7 @@ elem.parentNode.removeChild(elem);
 
 background-colors
 https://coliss.com/articles/build-websites/operation/css/gradient-background-hue-css.html
+
+
+https://eng-entrance.com/lpic101
+https://eng-entrance.com/lpic102

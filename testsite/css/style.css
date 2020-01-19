@@ -45,6 +45,7 @@ header nav {
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
+  display: flex;
 }
 
 header nav li {
@@ -84,6 +85,7 @@ section {
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 100px 100px;
@@ -128,7 +130,7 @@ section p {
   z-index: -1;
 }
 
-.banner-area .banner-img::after {
+.banner-area .banner-img:after {
   content: '';
   position: absolute;
   top: 0;
@@ -150,10 +152,96 @@ section p {
   font-size: 25px;
 }
 
-.banner-area a.baner-btn {
+.banner-area a.banner-btn {
   padding: 15px 35px;
   background: crimson;
   border-radius: 50px;
   text-transform: uppercase;
 
+}
+
+@media (max-width:800px) {
+  .banner-area {
+    min-height: 600px;
+  }
+
+  .banner-area h1 {
+    font-size: 32px;
+  }
+
+  .banner-area h3 {
+    font-size: 20px;
+  }
+
+  .banner-area a.banner-btn {
+    padding: 15px 40px;
+  }
+}
+
+/*about area*/
+ul.about-content {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-content li {
+  padding: 20px;
+  height: 290px;
+  background-clip: content-box;
+  -webkit-background-size: cover;
+  block-size: cover;
+  background-position: center;
+}
+
+.about-left {
+  flex-basis: 40%;
+  background-image: url(/testsite/img/image1.jpg);
+}
+
+.about-right {
+  flex-basis: 60%;
+}
+
+.about-area p {
+  max-width: 800px;
+  margin-bottom: 35px;
+  line-height: 2.5;
+  text-align: left;
+  padding-left: 0;
+}
+
+section-title {
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 5%;
+}
+
+.about-right h2 {
+  margin-bottom: 3%;
+}
+
+.about-btn {
+  padding: 15px 25px;
+  background: crimson;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media(max-width:1000px) {
+
+  .about-left,
+  .about-right {
+    flex-basis: 100%;
+  }
+
+  .about-content li {
+    padding: 8px;
+  }
 }

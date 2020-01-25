@@ -25,10 +25,6 @@ header {
   left: 0;
   z-index: 10;
   width: 100%;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,10 +37,6 @@ header h2 {
 }
 
 header nav {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
 }
 
@@ -81,10 +73,6 @@ header nav li:last-child {
 }
 
 section {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,7 +114,7 @@ section p {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-background-size: cover;
+  background-size: cover;
   z-index: -1;
 }
 
@@ -181,10 +169,6 @@ section p {
 /*about area*/
 ul.about-content {
   width: 100%;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -194,7 +178,7 @@ ul.about-content {
   padding: 20px;
   height: 290px;
   background-clip: content-box;
-  -webkit-background-size: cover;
+  background-size: cover;
   block-size: cover;
   background-position: center;
 }

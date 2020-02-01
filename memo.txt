@@ -1,1 +1,13 @@
 youtube.com/watch?v=0BfkcaHXen8
+
+Option Explicit
+
+'閉じるボタン
+Private Sub CommandButton1_Click()
+    Unload UserForm1
+End Sub
+
+Private Sub UserForm_Initialize()
+    'セルと連動させる
+    TextBox1.ControlSource = "B7"
+End Sub

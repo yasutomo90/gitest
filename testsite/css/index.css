@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: url(../testsite/img/bg.jpg);
+  background: url(/testsite/img/bg.jpg);
   background-size: cover;
 }
 

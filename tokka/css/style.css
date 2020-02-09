@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#content {
+  border: solid 1px #333333;
+  border-radius: 15px;
+  margin: 10px;
+  width: 500px;
+  padding: 10px;
+}
+
+#content .input_form {
+  margin: 20px 0;
+  position: relative;
+}
+
+#content .input_form label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#content .input_form input {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+#content .input_form:focus ~ label,
+#content .input_form:valid ~ label {
+  font-size: 12px;
+  top: -18px;
+  left: 0;
+}
+
+#content .input_form_date input {
+  width: 30px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: url(/testsite/img/bg.jpg);
+  background: url(../testsite/img/bg.jpg);
   background-size: cover;
 }
 
@@ -11,13 +11,13 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   font-family: sans-serif;
   background-color: rgba(0, 0, 0, 0.8);
   width: 400px;
   padding: 40px;
   -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
 
@@ -58,8 +58,8 @@ body {
   transition: .5s;
 }
 
-.box form .input_box :focus ~ label,
-.box form .input_box :valid ~ label {
+.box form .input_box :focus~label,
+.box form .input_box :valid~label {
   top: -18px;
   left: 0;
   color: #03a9f4;
@@ -76,4 +76,5 @@ body {
   cursor: pointer;
   border-radius: 5px;
 }
+
 /*# sourceMappingURL=index.css.map */

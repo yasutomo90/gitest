@@ -30,8 +30,8 @@
 
     }
 
-    &:focus~label,
-    &:valid~label {
+    & :focus~label,
+    & :valid~label {
       font-size: 12px;
       top: -18px;
       left: 0;

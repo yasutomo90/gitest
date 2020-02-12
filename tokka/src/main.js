@@ -1,14 +1,14 @@
 let inputbox_value = ["test1", "test2", "test3", "test4", "test5"];
 
 window.addEventListener("load", function () {
-  set_selectbox();
+  set_selectbox("target_day1");
   textbox_create();
 }, false)
 
 
-let set_selectbox = () => {
-  let target_month = document.getElementById("month");
-  for (var i = 1; i <= 12; i++) {
+let set_selectbox = target => {
+  let target_month = document.getElementById(target);
+  for (var i = 9; i <= 19; i++) {
     let opt = document.createElement("option");
     opt.setAttribute = ("value", i);
     opt.innerHTML = i;

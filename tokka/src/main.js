@@ -30,3 +30,15 @@ let textbox_create = () => {
   div_test.appendChild(label);
   target.appendChild(div_test);
 }
+
+
+//参考
+var customers = {
+  "田中太郎": "03-53xx-xxxx",
+  "田中二郎": "03-54xx-xxxx",
+  "田中花子": "03-55xx-xxxx"
+};
+
+for (key in customers) {
+  alert(key + "さんの番号は、" + customers[key] + "です。");
+}

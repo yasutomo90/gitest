@@ -1,23 +1,83 @@
 * {
-  border: 1px solid black;
+  font-family: "メイリオ";
+  font-weight: bold;
+}
+
+body {
+  background-color: ＃F4F5F7;
 }
 
 #header {
-  margin: 30px 30px 30px 350px;
-  width: 150px;
+  margin: 30px 0;
+  width: 500px;
+  text-align: center;
 }
 
 #main {
-  margin-left: 20px;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 15px 250px 15px 250px 1fr;
+}
 
-  #left {
-    margin-left: 20px;
-    display: flex;
-  }
+#left,
+#right {
+  display: inline-block;
+}
 
-  #right {
-    margin-left: 20px;
-    display: flex;
+#left {
+  grid-column: 2/3;
+}
+
+#right {
+  grid-column: 4/5;
+}
+
+#footer {
+  margin: 20px;
+
+  input {
+    margin-bottom: 40px;
   }
 }
+
+.input_form {
+  position: relative;
+  margin-bottom: 10px;
+
+  input {
+    height: 2em;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba($color: #ff0000, $alpha: .4);
+    border-radius: 10px;
+  }
+
+  label {
+    position: absolute;
+    top: 0.3em;
+    left: 5px;
+    transition: .5s;
+  }
+
+  & :focus~label,
+  & :valid~label {
+    font-size: 12px;
+    top: -12px;
+  }
+
+  input:valid {
+    border: 2px solid rgba($color: #25a4f8, $alpha: .4);
+  }
+}
+
+#test_text {
+  border: 2px solid rgba($color: #ff0000, $alpha: .4);
+  border-radius: 10px;
+}
+
+#test_text:valid {
+  border: 2px solid rgba($color: #25a4f8, $alpha: .4);
+}
+
+//ラジオボタンをgetElementsByNameで取得し、'element'.checked = false でチェックを外す
+//ラジオボタンnameを配列で用意してforでループするといいよ

@@ -4,8 +4,12 @@
 }
 
 body {
-  background-color: #333;
-  color: #F4F5F7;
+  background-color: #F4F5F7;
+  color: #333;
+}
+
+input {
+  color: #333;
 }
 
 #main {
@@ -72,8 +76,9 @@ body {
 
   & :focus~label,
   & :valid~label {
-    font-size: 12px;
-    top: -12px;
+    font-size: 14px;
+    top: -16px;
+    color: rgb(75, 243, 193);
   }
 
   input:valid {

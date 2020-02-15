@@ -5,8 +5,12 @@
 }
 
 body {
-  background-color: #333;
-  color: #F4F5F7;
+  background-color: #F4F5F7;
+  color: #333;
+}
+
+input {
+  color: #333;
 }
 
 #main {
@@ -106,8 +110,9 @@ body {
 
 .input_form :focus ~ label,
 .input_form :valid ~ label {
-  font-size: 12px;
-  top: -12px;
+  font-size: 14px;
+  top: -16px;
+  color: #4bf3c1;
 }
 
 .input_form input:valid {

@@ -4,14 +4,13 @@
 }
 
 body {
-  background-color: ＃F4F5F7;
+  background-color: #333;
+  color: #F4F5F7;
 }
-
-
 
 #main {
   display: grid;
-  grid-template-rows: 70px 350px 100px 1fr;
+  grid-template-rows: 70px 430px 100px 1fr;
   grid-template-columns: 15px 250px 15px 250px 1fr;
 }
 
@@ -55,17 +54,19 @@ body {
   margin-bottom: 10px;
 
   input {
-    height: 2em;
+    height: 2.3em;
     display: flex;
     align-items: center;
     border: 2px solid rgba($color: #ff0000, $alpha: .4);
     border-radius: 10px;
+    background: rgba($color: #fff, $alpha: .1);
+    margin-bottom: 20px;
   }
 
   label {
     position: absolute;
-    top: 0.35em;
-    left: 5px;
+    top: 0.5em;
+    left: 7px;
     transition: .5s;
   }
 
@@ -83,6 +84,7 @@ body {
 #test_text {
   border: 2px solid rgba($color: #ff0000, $alpha: .4);
   border-radius: 10px;
+  background: rgba($color: #fff, $alpha: .1);
 }
 
 #test_text:valid {

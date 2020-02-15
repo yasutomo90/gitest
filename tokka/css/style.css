@@ -1,46 +1,30 @@
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  border: 1px solid black;
 }
 
-#content {
-  border: solid 1px #333333;
-  border-radius: 15px;
-  margin: 10px;
-  width: 500px;
-  padding: 10px;
+#header {
+  margin: 30px 30px 30px 350px;
+  width: 150px;
 }
 
-#content .input_form {
-  margin: 20px 0;
-  position: relative;
+#main {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#content .input_form label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
-  -webkit-transition: .5s;
-  transition: .5s;
+#main #left {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#content .input_form input {
-  font-size: 18px;
-  letter-spacing: 1px;
-}
-
-#content .input_form :focus ~ label,
-#content .input_form :valid ~ label {
-  font-size: 12px;
-  top: -18px;
-  left: 0;
-}
-
-#content .input_form_date input {
-  width: 30px;
+#main #right {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

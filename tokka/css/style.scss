@@ -1,48 +1,23 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  border: 1px solid black;
 }
 
-#content {
-  border: solid 1px #333333;
-  border-radius: 15px;
-  margin: 10px;
-  width: 500px;
-  padding: 10px;
+#header {
+  margin: 30px 30px 30px 350px;
+  width: 150px;
+}
 
-  .input_form {
-    margin: 20px 0;
-    position: relative;
+#main {
+  margin-left: 20px;
+  display: flex;
 
-    label {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      pointer-events: none;
-      transition: .5s;
-    }
-
-    input {
-      font-size: 18px;
-      letter-spacing: 1px;
-
-    }
-
-    & :focus~label,
-    & :valid~label {
-      font-size: 12px;
-      top: -18px;
-      left: 0;
-    }
+  #left {
+    margin-left: 20px;
+    display: flex;
   }
 
-  .input_form_date {
-
-    input {
-      width: 30px;
-    }
+  #right {
+    margin-left: 20px;
+    display: flex;
   }
-
 }

@@ -10,11 +10,14 @@ let id_value = {
   "test9": "testくー"
 };
 
+let history = [];
 let crear_button = document.getElementById("crear");
+let create_log = document.getElementById("create");
 
 window.addEventListener("load", () => {
   //HTMLの読み込みが終わってから実行するやーつ
   create_test_elem();
+  create_log.addEventListener("click", output_log);
   crear_button.addEventListener("click", reset_form);
 }, false);
 
@@ -50,8 +53,18 @@ let create_test_elem = () => {
     div.appendChild(input);
     div.appendChild(label);
     target.appendChild(div);
-    div = "";
-    input = "";
-    label = "";
   }
+}
+
+//取得した日付の加工
+let output_log = () => {
+  let get_date = document.getElementById("date");
+  let yyyy = get_date.value.slice(0, 4);
+  let mm = get_date.value.slice(5, 7);
+  let dd = get_date.value.slice(8, 11);
+  console.log(yyyy);
+  console.log(mm);
+  console.log(dd);
+  let out_date = mm + "月" + dd + "日";
+  console.log(out_date);
 }

@@ -112,7 +112,7 @@ input {
 .input_form :valid ~ label {
   font-size: 14px;
   top: -16px;
-  color: #4bf3c1;
+  color: blue;
 }
 
 .input_form input:valid {

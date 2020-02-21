@@ -12,11 +12,13 @@ let id_value = {
 
 let history = [];
 let crear_button = document.getElementById("crear");
+let copy_btn = document.getElementById("copy");
 let create_log = document.getElementById("create");
-
+let click_chk = 1;
 window.addEventListener("load", () => {
   //HTMLの読み込みが終わってから実行するやーつ
   create_test_elem();
+  copy_btn.addEventListener("click", copy_btn_js);
   create_log.addEventListener("click", output_log);
   crear_button.addEventListener("click", reset_form);
 }, false);
@@ -67,4 +69,16 @@ let output_log = () => {
   console.log(dd);
   let out_date = mm + "月" + dd + "日";
   console.log(out_date);
+}
+
+let copy_btn_js = () => {
+  click_chk++;
+  let target = document.getElementById("target_text");
+  let input = document.createElement("input");
+  if (click_chk < 4) {
+    let input_text = target + click_chk;
+    input.setAttribute("name", input_text);
+    input.setAttribute("id", input_text);
+    target.appendChild(input);
+  }
 }

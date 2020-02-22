@@ -2,10 +2,10 @@
   display: -ms-grid;
   display: grid;
   gap: 5px;
-  -ms-grid-columns: 800px 1fr;
-      grid-template-columns: 800px 1fr;
-  -ms-grid-rows: 100px 100px 300px 1fr;
-      grid-template-rows: 100px 100px 300px 1fr;
+  -ms-grid-columns: 800px;
+      grid-template-columns: 800px;
+  -ms-grid-rows: 100px 100px 300px 100px;
+      grid-template-rows: 100px 100px 300px 100px;
 }
 
 #select_box h1 {
@@ -43,5 +43,23 @@
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   margin: 0 auto;
+}
+
+#radio_area form {
+  margin-top: 20px;
+}
+
+#radio_area label {
+  margin-right: 15px;
+}
+
+#log_area {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */

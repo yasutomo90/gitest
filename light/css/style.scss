@@ -1,8 +1,8 @@
 #select_box {
   display: grid;
   gap: 5px;
-  grid-template-columns: 800px 1fr;
-  grid-template-rows: 100px 100px 300px 1fr;
+  grid-template-columns: 800px;
+  grid-template-rows: 100px 100px 300px 100px;
 
   h1 {
     grid-row: 1/2;
@@ -26,4 +26,18 @@
   grid-row: 3/4;
   grid-column: 1/2;
   margin: 0 auto;
+
+  form {
+    margin-top: 20px;
+  }
+
+  label {
+    margin-right: 15px;
+  }
+}
+
+#log_area {
+  grid-row: 4/5;
+  grid-column: 1/2;
+  margin: auto;
 }

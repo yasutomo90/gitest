@@ -1,21 +1,21 @@
-let model_lib = ["--", "PR", "RT", "RV", "RX"];
-let PR_model = ["---", "100", "200", "300", "400"];
-let RT_model = ["---", "200", "200", "300", "400"];
-let RV_model = ["---", "300", "200", "300", "400"];
-let RX_model = ["---", "400", "200", "300", "400"];
-let main_model = "";
-let sub_model = "";
+const model_lib = ["--", "PR", "RT", "RV", "RX"];
+const PR_model = ["---", "100", "200", "300", "400"];
+const RT_model = ["---", "200", "200", "300", "400"];
+const RV_model = ["---", "300", "200", "300", "400"];
+const RX_model = ["---", "400", "200", "300", "400"];
+const main_model = "";
+const sub_model = "";
 
 let histry = [];
 
-let power = ["点灯", "消灯"];
-let ararm = ["消灯", "赤灯"];
-let ppp = ["点灯", "消灯", "橙"];
-let light_tel = ["点灯", "点滅", "消灯"];
-let act = ["点灯", "点滅", "消灯"];
+const power = ["点灯", "消灯"];
+const ararm = ["消灯", "赤灯"];
+const ppp = ["点灯", "消灯", "橙"];
+const light_tel = ["点灯", "点滅", "消灯"];
+const act = ["点灯", "点滅", "消灯"];
 
 // let pr_rooter = [power, ararm, ppp, light_tel, act];
-let pr_rooter = {
+const pr_rooter = {
   "power": power,
   "ararm": ararm,
   "ppp": ppp,
@@ -32,7 +32,7 @@ window.addEventListener("load", () => {
 }, false);
 
 //option-create
-let select_create = (lib, target) => {
+const select_create = (lib, target) => {
   var tango = document.getElementById(target);
   while (tango.lastChild) {
     tango.removeChild(tango.lastChild);
@@ -46,7 +46,7 @@ let select_create = (lib, target) => {
 }
 
 //adio-creaete
-let radio_create = target => {
+const radio_create = target => {
   // var tango = document.getElementById(target);
   // while (tango.lastChild) {
   //   tango.removeChild(tango.lastChild);
@@ -75,7 +75,7 @@ let radio_create = target => {
 
 
 //機種の頭文字２つのあたいによってかわるやーつ
-let change_select = tango_obj => {
+const change_select = tango_obj => {
   var obj_value = tango_obj.value;
   switch (obj_value) {
     case "PR":
@@ -100,7 +100,7 @@ let change_select = tango_obj => {
   }
 }
 
-let change_model = tango_sub_obj => {
+const change_model = tango_sub_obj => {
   var sub_object_value = tango_sub_obj.value;
   switch (sub_object_value) {
     case "100":
@@ -129,7 +129,7 @@ let change_model = tango_sub_obj => {
   }
 }
 
-let his_log = () => {
+const his_log = () => {
   let j = 0;
   for (key in pr_rooter) {
     let chk_name = document.getElementsByName(key);

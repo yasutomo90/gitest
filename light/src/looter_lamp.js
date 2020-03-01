@@ -19,3 +19,6 @@ const pr600_ki = {
 }
 
 const pr600_ki_name = ["ルータ電源ランプ", "アラームランプ", "ＰＰＰランプ", "ひかり電話ランプ", "ＡＣＴランプ", "登録ランプ", "初期状態ランプ", "オプションランプ", "認証ランプ", "ＵＮＩランプ", "光回線ランプ", "電源ランプ", "映像出力ランプ", "登録ランプ", "アラームランプ"];
+
+
+const hlogs_key = ["rooter_power", "alarm", "ppp", "light_tel", "act", "register", "initial", "option", "Authentication", "uni", "optical_line", "power", "movie", "lan_setup", "lan_setup_ararm"];

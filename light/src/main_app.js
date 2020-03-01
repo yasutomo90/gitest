@@ -47,10 +47,7 @@ const select_create = (lib, target) => {
 
 //adio-creaete
 const radio_create = target => {
-  // var tango = document.getElementById(target);
-  // while (tango.lastChild) {
-  //   tango.removeChild(tango.lastChild);
-  // }
+  document.getElementById("radio_area").innerHTML = "";
   for (key in target) {
     console.log(key);
     let input_radio = document.getElementById("radio_area");
@@ -105,7 +102,7 @@ const change_model = tango_sub_obj => {
   switch (sub_object_value) {
     case "100":
       console.log("test1");
-      radio_create(pr_rooter);
+      radio_create(pr600_ki);
       break;
 
     case "200":
@@ -115,7 +112,7 @@ const change_model = tango_sub_obj => {
 
     case "300":
       console.log("test3");
-      radio_create(pr_rooter);
+      radio_create(pr600_ki);
       break;
 
     case "400":
@@ -129,16 +126,33 @@ const change_model = tango_sub_obj => {
   }
 }
 
+// const his_log = () => {
+//   let j = 0;
+//   for (key in pr_rooter) {
+//     let chk_name = document.getElementsByName(key);
+//     for (i = 0, d = chk_name.length; i < d; i++) {
+//       if (chk_name[i].checked) {
+//         histry[j] = chk_name[i].value;
+//         j++;
+//       }
+//     }
+//   }
+//   document.getElementById("log").value = histry;
+// }
+
 const his_log = () => {
-  let j = 0;
-  for (key in pr_rooter) {
-    let chk_name = document.getElementsByName(key);
-    for (i = 0, d = chk_name.length; i < d; i++) {
-      if (chk_name[i].checked) {
-        histry[j] = chk_name[i].value;
-        j++;
+  for (i = 0, d = hlogs_key.length; i < d; i++) {
+    let chk_name = document.getElementsByName(hlogs_key[i]);
+    console.log("6");
+    for (j = 0, dd = chk_name.length; j < dd; j++) {
+      console.log("7");
+      if (chk_name[j].checked) {
+        histry[i] = chk_name[j].value;
+        console.log("8");
       }
     }
+    //ログのチェックのやつ
+    const histry_ex = histry.join("\n");
+    document.getElementById("log").value = histry_ex;
   }
-  document.getElementById("log").value = histry;
 }

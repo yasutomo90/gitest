@@ -8,27 +8,27 @@ const sub_model = "";
 
 let histry = [];
 
-const power = ["点灯", "消灯"];
-const ararm = ["消灯", "赤灯"];
-const ppp = ["点灯", "消灯", "橙"];
-const light_tel = ["点灯", "点滅", "消灯"];
-const act = ["点灯", "点滅", "消灯"];
+// const power = ["点灯", "消灯"];
+// const ararm = ["消灯", "赤灯"];
+// const ppp = ["点灯", "消灯", "橙"];
+// const light_tel = ["点灯", "点滅", "消灯"];
+// const act = ["点灯", "点滅", "消灯"];
 
 // let pr_rooter = [power, ararm, ppp, light_tel, act];
-const pr_rooter = {
-  "power": power,
-  "ararm": ararm,
-  "ppp": ppp,
-  "light_tel": light_tel,
-  "act": act
-};
+// const pr_rooter = {
+//   "power": power,
+//   "ararm": ararm,
+//   "ppp": ppp,
+//   "light_tel": light_tel,
+//   "act": act
+// };
 //radioのid用配列と点灯パターンの配列を用意して必要なやつうをドッキング
 //もしくは多次元配列にしていい感じにPPPとかとか
 
 window.addEventListener("load", () => {
   //HTMLの読み込みが終わってから実行するやーつ
   select_create(model_lib, "main_select");
-  document.getElementById("create_btn").addEventListener("click", his_log);
+  //  document.getElementById("create_btn").addEventListener("click", his_log);
 }, false);
 
 //option-create
@@ -48,24 +48,27 @@ const select_create = (lib, target) => {
 //adio-creaete
 const radio_create = target => {
   document.getElementById("radio_area").innerHTML = "";
-  for (key in target) {
-    console.log(key);
-    let input_radio = document.getElementById("radio_area");
-    let form = document.createElement("form");
-    for (j = 0, dd = target[key].length; j < dd; j++) {
-      console.log(target[key][j]);
-      let radio = document.createElement("input");
-      let label = document.createElement("label");
-      radio.type = "radio";
-      radio.name = key;
-      radio.id = key + j;
-      radio.value = target[key][j];
-      label.htmlFor = key + j;
-      label.innerText = target[key][j];
-      form.appendChild(radio);
-      form.appendChild(label);
+  for (key1 in target) {
+    for (key2 in target[key1]) {
+      let input_radio = document.getElementById("radio_area");
+      let form = document.createElement("form");
+      let p = document.createElement("p");
+      p.innerHTML = key2;
+      form.appendChild(p);
+      for (j = 0, dd = target[key1][key2].length; j < dd; j++) {
+        let radio = document.createElement("input");
+        let label = document.createElement("label");
+        radio.type = "radio";
+        radio.name = key1;
+        radio.id = key1 + j;
+        radio.value = target[key1][key2][j];
+        label.htmlFor = key1 + j;
+        label.innerText = target[key1][key2][j];
+        form.appendChild(radio);
+        form.appendChild(label);
+      }
+      input_radio.appendChild(form);
     }
-    input_radio.appendChild(form);
   }
 }
 
@@ -140,19 +143,16 @@ const change_model = tango_sub_obj => {
 //   document.getElementById("log").value = histry;
 // }
 
-const his_log = () => {
-  for (i = 0, d = hlogs_key.length; i < d; i++) {
-    let chk_name = document.getElementsByName(hlogs_key[i]);
-    console.log("6");
-    for (j = 0, dd = chk_name.length; j < dd; j++) {
-      console.log("7");
-      if (chk_name[j].checked) {
-        histry[i] = chk_name[j].value;
-        console.log("8");
-      }
-    }
-    //ログのチェックのやつ
-    const histry_ex = histry.join("\n");
-    document.getElementById("log").value = histry_ex;
-  }
-}
+// const his_log = () => {
+//   for (i = 0, d = hlogs_key.length; i < d; i++) {
+//     let chk_name = document.getElementsByName(hlogs_key[i]);
+//     for (j = 0, dd = chk_name.length; j < dd; j++) {
+//       if (chk_name[j].checked) {
+//         histry[i] = chk_name[j].value;
+//       }
+//     }
+//     //ログのチェックのやつ
+//     const histry_ex = histry.join("\n");
+//     document.getElementById("log").value = histry_ex;
+//   }
+// }

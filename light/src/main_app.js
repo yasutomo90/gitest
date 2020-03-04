@@ -8,6 +8,8 @@ const sub_model = "";
 
 let histry = [];
 
+let flag_log = "";
+
 // const power = ["点灯", "消灯"];
 // const ararm = ["消灯", "赤灯"];
 // const ppp = ["点灯", "消灯", "橙"];
@@ -28,6 +30,7 @@ let histry = [];
 window.addEventListener("load", () => {
   //HTMLの読み込みが終わってから実行するやーつ
   select_create(model_lib, "main_select");
+  document.getElementById("check1").addEventListener("change", check_chk);
   //  document.getElementById("create_btn").addEventListener("click", his_log);
 }, false);
 
@@ -156,3 +159,35 @@ const change_model = tango_sub_obj => {
 //     document.getElementById("log").value = histry_ex;
 //   }
 // }
+
+
+
+
+
+const check_chk = () => {
+  let chk_box = document.getElementById("check1");
+  if (chk_box.checked) {
+    console.log("check");
+    create_radios();
+
+  } else {
+    console.log("no-check");
+  }
+}
+
+
+
+const create_radios = () => {
+  let p_s = document.createElement("p");
+  p_s.text = "testradios";
+  let radios = document.createElement("input");
+  radios.type = "radio";
+  radios.name = "radios_name";
+  radios.id = "radios_name" + "_ok";
+  let labels = document.createElement("label");
+  labels.htmlFor = "radios_name" + "_ok";
+  let targets = document.getElementById("radios");
+  targets.appendChild(p_s);
+  targets.appendChild(radios);
+  targets.appendChild(labels);
+}

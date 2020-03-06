@@ -10,6 +10,8 @@ let histry = [];
 
 let flag_log = "";
 
+let getting_test = [];
+
 // const power = ["点灯", "消灯"];
 // const ararm = ["消灯", "赤灯"];
 // const ppp = ["点灯", "消灯", "橙"];
@@ -30,6 +32,8 @@ let flag_log = "";
 window.addEventListener("load", () => {
   //HTMLの読み込みが終わってから実行するやーつ
   select_create(model_lib, "main_select");
+  document.getElementById("test_btn").addEventListener("click", create_form);
+  // document.getElementById("test_btn").addEventListener("click", tets_history);
   document.getElementById("check1").addEventListener("change", check_chk);
   //  document.getElementById("create_btn").addEventListener("click", his_log);
 }, false);
@@ -190,4 +194,26 @@ const create_radios = () => {
   targets.appendChild(p_s);
   targets.appendChild(radios);
   targets.appendChild(labels);
+}
+
+
+const test_name_get_value = () => {
+  getting_test = document.getElementsByName("text_test");
+  for (i = 0, d = getting_test.length; i < d; i++) {
+    if (getting_test[i].checked) {
+      console.log("ゲット");
+      return "tetste";
+    } else if (getting_test[i].value) {
+      console.log("とった");
+      return "tertert";
+    } else {
+      console.log("だめ");
+      return "aertae";
+    }
+  }
+}
+
+const tets_history = () => {
+  let testing_his = "testtarou" + test_name_get_value();
+  console.log(testing_his);
 }

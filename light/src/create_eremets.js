@@ -1,48 +1,76 @@
-const test_lib = [
-  ['text', 'test_text_id', 'test_placeholder'],
-  ['radio', 'radio_test_id', 'test_label1', 'test_label2'],
-  ['text', 'test_text_id2', 'test_placeholder2']
-];
+//テキストboxとラジオの生成
+const create_form = (target_id, target_lib) => {
+  let target = document.getElementById(target_id);
+  for (i = 0, d = target_lib.length; i < d; i++) {
 
-const create_form = () => {
-  let target = document.getElementById('test_target');
-  for (i = 0, d = test_lib.length; i < d; i++) {
-
-    if (test_lib[i][0] == 'text') {
+    if (target_lib[i][0] == 'text') {
       let form = document.createElement('form');
       let input = document.createElement('input');
       input.type = 'text';
-      console.log('text');
-      input.name = test_lib[i][1];
-      input.id = test_lib[i][1];
-      input.placeholder = test_lib[i][2];
+      input.name = target_lib[i][1];
+      input.placeholder = target_lib[i][2];
       form.appendChild(input);
       target.appendChild(form);
 
-    } else if (test_lib[i][0] == 'radio') {
+    } else if (target_lib[i][0] == 'radio') {
       let form = document.createElement('form');
-      let input_1 = document.createElement('input');
-      let input_2 = document.createElement('input');
-      let label_1 = document.createElement('label');
-      let label_2 = document.createElement('label');
-
-      input_1.type = 'radio';
-      input_1.name = test_lib[i][0];
-      input_1.id = test_lib[i][1] + '_ok';
-      label_1.htmlFor = test_lib[i][1] + '_ok';
-      label_1.innerText = test_lib[i][2];
-
-      input_2.type = 'radio';
-      input_2.name = test_lib[i][0];
-      input_2.id = test_lib[i][1] + '_ng';
-      label_2.htmlFor = test_lib[i][1] + '_ng';
-      label_2.innerText = test_lib[i][3];
-
-      form.appendChild(input_1);
-      form.appendChild(label_1);
-      form.appendChild(input_2);
-      form.appendChild(label_2);
+      let p = document.createElement('p');
+      p.insertAdjacentText('beforeend', target_lib[i][1]);
+      form.appendChild(p);
+      for (key in target_lib[i][3]) {
+        let { input, label } = create_radio(target_lib[i][2], key, target_lib[i][3][key]);
+        form.appendChild(input);
+        form.appendChild(label);
+      }
       target.appendChild(form);
     }
+  }
+}
+
+//ラジオボタン生成
+const create_radio = (radio_name, radio_id, label_text) => {
+  let label = document.createElement('label');
+  let input = document.createElement('input');
+  input.type = 'radio';
+  input.name = radio_name;
+  input.id = radio_id;
+  input.value = label_text;
+  label.htmlFor = radio_id;
+  label.innerText = label_text;
+  return { input, label };
+}
+
+//チェックボックスにチェックが有るか確認
+const check_box_chk = target_id => {
+  let chk_box = document.getElementById(target_id);
+  if (chk_box.checked) {
+    if (target_id == 'chk_optical_call') {
+      tango = document.getElementById('optical_call');
+      create_form('optical_call', optical);
+    } else if (target_id == 'chk_failure') {
+      tango = document.getElementById('optical_call');
+      create_form('failure_area', fault);
+    }
+  } else {
+    console.log('no-check');
+    if (target_id == 'chk_optical_call') {
+      document.getElementById('optical_call').innerHTML = '';
+    } else if (target_id == 'chk_failure') {
+      document.getElementById('failure_area').innerHTML = '';
+    }
+  }
+}
+
+//セレクトボックスの生成
+const select_create = (lib, target) => {
+  let tango = document.getElementById(target);
+  while (tango.lastChild) {
+    tango.innerHTML = "";
+  }
+  for (i = 0, j = lib.length; i < j; i++) {
+    let op = document.createElement('option');
+    op.value = lib[i];
+    op.text = lib[i];
+    tango.appendChild(op);
   }
 }

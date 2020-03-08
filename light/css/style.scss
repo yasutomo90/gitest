@@ -1,43 +1,56 @@
 #select_box {
   display: grid;
   gap: 5px;
-  grid-template-columns: 800px;
-  grid-template-rows: 100px 100px 300px 100px;
-
+  grid-template-columns: 500px 1fr;
+  grid-template-rows: 100px auto auto auto auto auto;
+  justify-items: center;
+  form{
+    margin-bottom: 15px;
+  }
   h1 {
     grid-row: 1/2;
     grid-column: 1/2;
-    justify-content: center;
     margin: auto;
   }
 }
 
-.select_area {
+#farst_form{
   grid-row: 2/3;
   grid-column: 1/2;
-  margin: auto;
+}
 
+.select_area {
+  grid-row: 3/4;
+  grid-column: 1/2;
   select {
     width: 50px;
   }
 }
 
-#radio_area {
-  grid-row: 3/4;
+#second_form{
+  grid-row: 4/5;
   grid-column: 1/2;
-  margin: 0 auto;
+}
 
-  form {
-    margin-top: 20px;
-  }
+#radio_area {
+  grid-row: 5/6;
+  grid-column: 1/2;
+}
 
-  label {
-    margin-right: 15px;
-  }
+#therd_form{
+  grid-row: 6/7;
+  grid-column: 1/2;
+width: 180px;
+  p{
+    margin-top: 15px;
+}
 }
 
 #log_area {
-  grid-row: 4/5;
+  grid-row: 7/8;
   grid-column: 1/2;
-  margin: auto;
+}
+
+form,select{
+  margin-bottom: 15px;
 }

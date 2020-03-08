@@ -10,33 +10,46 @@
 <body>
   <content id="select_box">
     <h1>TEST</h1>
+    <div id="farst_form"></div>
     <div class="select_area">
-      <select name="main_select" id="main_select" onchange="change_select(this);">
+      <p>機器名</p>
+      <select name="farst_model_name" id="farst_model_name">
         <option value="---">---</option>
       </select>
-      <select name="sub_select " id="sub_select" onchange="change_model(this);">
+      <select name="second_model_name " id="second_model_name">
         <option value="---">---</option>
       </select>
     </div>
-    <div id="test_target"></div>
-    <div id="input_form">
-      <input type="checkbox" name="check1" id="check1">
-      <label for="check1">check1</label>
-      <form id="radios"></form>
-    </div>
+    <div id="second_form"></div>
     <div id="radio_area"></div>
-    <div id="log_area">
-      <input type="button" value="作成" id="create_btn">
-      <br>
-      <textarea name="log" id="log" cols="30" rows="10"></textarea>
+    <div id="therd_form">
+      <div id="availability_optical_call">
+        <p>利用可否</p>
+        <label><input type="checkbox" name="chk_optical_call" id="chk_optical_call">利用不可</label>
+        <form id="optical_call"></form>
+      </div>
+      <div id="failure">
+        <p>故障有無</p>
+        <label><input type="checkbox" name="chk_failure" id="chk_failure">故障</label>
+        <form id="failure_area"></form>
+      </div>
     </div>
-    <div id="test_tarou">
-      <input type="text" name="text_test" id="text_test">
-      <input type="button" value="test" id="test_btn">
+    <div id="log_area">
+      <form>
+        <input type="button" value="作成" id="create_btn">
+        <input type="button" value="コピー" id="his_copy">
+        <input type="button" value="初期化" id="initialise">
+      </form>
+      <form>
+        <textarea name="log" id="log" cols="30" rows="10"></textarea>
+      </form>
+    </div>
+    <div id="test_area">
+      <label><input type="radio" name="test" id="test">test</label>
     </div>
   </content>
-  <script type="text/javascript" src="light/src/main_app.js"></script>
   <script type="text/javascript" src="light/src/looter_lamp.js"></script>
   <script type="text/javascript" src="light/src/create_eremets.js"></script>
+  <script type="text/javascript" src="light/src/main_app.js"></script>
 </body>
 </html>

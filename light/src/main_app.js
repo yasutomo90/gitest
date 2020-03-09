@@ -23,70 +23,8 @@ document.getElementById('create_btn').addEventListener('click', () => { name_get
 document.getElementById('chk_optical_call').addEventListener('change', () => { check_box_chk('chk_optical_call') }, false);
 document.getElementById('chk_failure').addEventListener('change', () => { check_box_chk('chk_failure') }, false);
 
-//機種のチェック
-const change_select = () => {
-  obj_value = document.getElementById('farst_model_name').value;
-  switch (obj_value) {
-    case 'PR':
-      select_create(PR_model, 'second_model_name');
-      break;
-
-    case 'RT':
-      select_create(RT_model, 'second_model_name');
-      break;
-
-    case 'RV':
-      select_create(RV_model, 'second_model_name');
-      break;
-
-    case 'RX':
-      select_create(RX_model, 'second_model_name');
-      break;
-
-    default:
-      console.log('default');
-      break;
-  }
-}
-
-//型番のチェック
-const change_model = () => {
-  sub_object_value = document.getElementById('second_model_name').value;
-  switch (sub_object_value) {
-    case '100':
-      console.log('test1');
-      document.getElementById('radio_area').innerHTML = '';
-      create_form('radio_area', pr600_ki);
-      break;
-
-    case '200':
-      console.log('test2');
-      document.getElementById('radio_area').innerHTML = '';
-      create_form('radio_area', pr600_ki);
-      break;
-
-    case '300':
-      console.log('test3');
-      document.getElementById('radio_area').innerHTML = '';
-      create_form('radio_area', pr600_ki);
-      break;
-
-    case '400':
-      console.log('test4');
-      document.getElementById('radio_area').innerHTML = '';
-      create_form('radio_area', pr600_ki);
-      break;
-
-    default:
-      console.log('default');
-      break;
-  }
-}
-
-
 //nameでvalueを取得
 const name_get_value = () => {
-
   for (i = 0, d = all_name_lib.length; i < d; i++) {
     getting_log = document.getElementsByName(all_name_lib[i]);
     for (j = 0, dd = getting_log.length; j < dd; j++) {

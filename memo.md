@@ -18,4 +18,4 @@ for(配列の数繰り返す)
     if(チェックが入っているか)
       valueをゲット
 ```
-typeとname or IDだけのリストを作成
+#### typeとname or IDだけのリストを作成

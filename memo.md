@@ -4,7 +4,7 @@
 
 #### textboxとradioのvalueチェックを簡単にするための配列
 
-{type : type, id : [id1, id2, id3], name : name, value : [value1, value2, value3]}
+{type : type, label_name: label_name, name : name, id : [id1, id2, id3], value : [value1, value2, value3]}
 
 #### valueをゲットするための備考
 

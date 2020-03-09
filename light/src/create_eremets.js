@@ -8,6 +8,7 @@ const create_form = (target_id, target_lib) => {
       let input = document.createElement('input');
       input.type = 'text';
       input.name = target_lib[i][1];
+      input.id = target_lib[i][1];
       input.placeholder = target_lib[i][2];
       form.appendChild(input);
       target.appendChild(form);
@@ -72,5 +73,19 @@ const select_create = (lib, target) => {
     op.value = lib[i];
     op.text = lib[i];
     tango.appendChild(op);
+  }
+}
+
+const text_value = target_id => {
+  let target = document.getElementById(target_id);
+  return target.value;
+}
+
+const radio_value = target_name => {
+  let target = document.getElementsByName(target_name);
+  for (i = 0, d = target.length; i < d; i++) {
+    if (target[i].checked) {
+      return target[i].value;
+    }
   }
 }

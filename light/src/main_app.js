@@ -15,8 +15,6 @@ window.addEventListener('load', () => {
   create_form('second_form', second_lib);
   document.getElementById('farst_model_name').addEventListener('change', change_select, false);
   document.getElementById('second_model_name').addEventListener('change', change_model, false);
-
-
 }, false);
 
 document.getElementById('create_btn').addEventListener('click', () => { name_get_value() }, false);
@@ -38,4 +36,12 @@ const name_get_value = () => {
     }
   }
   //join
+}
+
+
+
+
+
+const all_his = () => {
+  history[0] = text_value();
 }

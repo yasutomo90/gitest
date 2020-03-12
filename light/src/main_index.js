@@ -27,7 +27,7 @@ const create_form = (target_id, target_lib) => {
   }
 }
 
-const create_former = (target_id, target_lib){
+const create_former = (target_id, target_lib) => {
   let target = document.getElementById(target_id);
   for (i = 0, d = target_lib.length; i < d; i++) {
     let form = document.createElement('form');
@@ -65,7 +65,7 @@ const create_radio = (radio_name, radio_id, label_text) => {
 }
 
 //テキストボックス生成
-const create_textbox = (text_id, text_value){
+const create_textbox = (text_id, text_value) => {
   let input = document.createElement('input');
   input.type = 'text';
   input.name = text_id;

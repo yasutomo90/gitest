@@ -2,24 +2,19 @@
 const create_form = (target_id, target_lib) => {
   let target = document.getElementById(target_id);
   for (i = 0, d = target_lib.length; i < d; i++) {
+    let form = document.createElement('form');
 
-    if (target_lib[i][0] == 'text') {
-      let form = document.createElement('form');
-      let input = document.createElement('input');
-      input.type = 'text';
-      input.name = target_lib[i][1];
-      input.id = target_lib[i][1];
-      input.placeholder = target_lib[i][2];
+    if (target_lib[i]['type'] == 'text') {
+      let input = create_textbox(target_lib[i]['id'], target_lib[i]['value']);
       form.appendChild(input);
       target.appendChild(form);
+    } else if (target_lib[i]['type'] == 'radio') {
 
-    } else if (target_lib[i][0] == 'radio') {
-      let form = document.createElement('form');
       let p = document.createElement('p');
-      p.insertAdjacentText('beforeend', target_lib[i][1]);
+      p.insertAdjacentText('beforeend', target_lib[i]['label_text']);
       form.appendChild(p);
-      for (key in target_lib[i][3]) {
-        let { input, label } = create_radio(target_lib[i][2], key, target_lib[i][3][key]);
+      for (j = 0, dd = target_lib[i]['id'].length; j < dd; j++) {
+        let { input, label } = create_radio(target_lib[i]['name'], target_lib[i]['id'][j], target_lib[i]['value'][j]);
         form.appendChild(input);
         form.appendChild(label);
       }
@@ -41,25 +36,14 @@ const create_radio = (radio_name, radio_id, label_text) => {
   return { input, label };
 }
 
-//チェックボックスにチェックが有るか確認
-const check_box_chk = target_id => {
-  let chk_box = document.getElementById(target_id);
-  if (chk_box.checked) {
-    if (target_id == 'chk_optical_call') {
-      tango = document.getElementById('optical_call');
-      create_form('optical_call', optical);
-    } else if (target_id == 'chk_failure') {
-      tango = document.getElementById('optical_call');
-      create_form('failure_area', fault);
-    }
-  } else {
-    console.log('no-check');
-    if (target_id == 'chk_optical_call') {
-      document.getElementById('optical_call').innerHTML = '';
-    } else if (target_id == 'chk_failure') {
-      document.getElementById('failure_area').innerHTML = '';
-    }
-  }
+//テキストボックス生成
+const create_textbox = (text_id, text_value) => {
+  let input = document.createElement('input');
+  input.type = 'text';
+  input.name = text_id;
+  input.id = text_id;
+  input.placeholder = text_value;
+  return input;
 }
 
 //セレクトボックスの生成
@@ -73,19 +57,5 @@ const select_create = (lib, target) => {
     op.value = lib[i];
     op.text = lib[i];
     tango.appendChild(op);
-  }
-}
-
-const text_value = target_id => {
-  let target = document.getElementById(target_id);
-  return target.value;
-}
-
-const radio_value = target_name => {
-  let target = document.getElementsByName(target_name);
-  for (i = 0, d = target.length; i < d; i++) {
-    if (target[i].checked) {
-      return target[i].value;
-    }
   }
 }

@@ -1,3 +1,5 @@
+let obj_value = '';
+let sub_object_value = '';
 
 //機種のチェック
 const change_select = () => {

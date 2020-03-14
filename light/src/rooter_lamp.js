@@ -1,5 +1,7 @@
 //{ type: text, id : id, value : placeholder }
 //{ type: radio, label_text: label_text, name : name, id : [], value : [] }
+
+//ラジオランプ
 const rooter_power = { type: 'radio', label_text: 'ルーター電源ランプ', name: 'rooter_power_lamp', id: ['rooter_power_lamp_green', 'rooter_power_lamp_black'], value: ['緑点灯', '消灯'] };
 const alarm = { type: 'radio', label_text: 'アラームランプ', name: 'alarm_lamp', id: ['alarm_lamp_red', 'alarm_lamp_red_flash', 'alarm_lamp_black'], value: ['赤点灯', '赤点滅', '消灯'] };
 const ppp = { type: 'radio', label_text: 'PPPランプ', name: 'ppp_lamp', id: ['ppp_lamp_green', 'ppp_lamp_orange', 'ppp_lamp_black'], value: ['緑点灯', '橙点灯', '消灯'] };
@@ -18,20 +20,21 @@ const movie = { type: 'radio', label_text: '映像出力ランプ', name: 'movie
 const lan_setup = { type: 'radio', label_text: '登録ランプ', name: 'lan_setup_lamp', id: ['lan_setup_lamp_green_flach', 'lan_setup_lamp_orange_flach', 'lan_setup_lamp_orange', 'lan_setup_lamp_red'], value: ['緑点滅', '橙点滅', '橙点灯(10秒間)', '赤点灯(10秒間)'] };
 const lan_setup_ararm = { type: 'radio', label_text: 'アラームランプ', name: 'lan_setup_ararm_lamp', id: ['lan_setup_ararm_lamp_red', 'lan_setup_ararm_lamp_black'], value: ['赤点灯(10秒間)', '消灯'] };
 
+//最初の項目
+const user_account = { type: 'text', id: 'user_account', value: 'アカウント' };
+const cfs = { type: 'text', id: 'cfs', value: 'CFS' };
+const tell_no = { type: 'text', id: 'tell_no', value: '電話番号' };
+const west_east = { type: 'radio', label_text: '西or東', name: 'west_east', id: ['west', 'east'], value: ['西', '東'] };
+const farst_lib = [user_account, cfs, tell_no, tell_no, west_east];
 
-const farst_lib = [
-  { type: 'text', id: 'user_account', value: 'アカウント' },
-  { type: 'text', id: 'cfs', value: 'CFS' },
-  { type: 'text', id: 'tell_no', value: '電話番号' },
-  { type: 'radio', label_text: '西or東', name: 'west_east', id: ['west', 'east'], value: ['西', '東'] }
-];
+//次の項目
+const wireless_lan = { type: 'text', id: 'wireless_lan', value: '無線LANメーカー' };
+const wireless_model = { type: 'text', id: 'wireless_model', value: '無線型番' };
+const rooter_mode = { type: 'radio', label_text: 'ルーターモード', name: 'rooter_mode', id: ['ap_mode', 'rt_mode', 'br_mode'], value: ['AP', 'RT', 'BR'] };
 
-const second_lib = [
-  { type: 'text', id: 'wireless_lan', value: '無線LANメーカー' },
-  { type: 'text', id: 'wireless_model', value: '無線型番' },
-  { type: 'radio', label_text: 'ルーターモード', name: 'rooter_mode', id: ['ap_mode', 'rt_mode', 'br_mode'], value: ['AP', 'RT', 'BR'] }
-];
+const second_lib = [wireless_lan, wireless_model, rooter_mode];
 
+//下の項目
 const optical = [
   { type: 'radio', label_text: '利用可否', name: 'use', id: ['use_ok', 'use_ng'], value: ['可', '不可'] },
   { type: 'radio', label_text: 'ディスプレイ', name: 'display', id: ['display_ok', 'display_ng'], value: ['点灯', '消灯'] },
@@ -39,6 +42,7 @@ const optical = [
   { type: 'radio', label_text: 'モジュラーケーブル', name: 'modular_cable', id: ['modular_cable_ok', 'modular_cable_ng'], value: ['改善', '改善なし'] }
 ];
 
+//下の項目その2
 const fault = [
   { type: 'radio', label_text: 'リブート', name: 'reboot', id: ['reboot_ok', 'reboot_ng'], value: ['改善', '改善なし'] },
   { type: 'radio', label_text: '訪問', name: 'visit', id: ['visit_ok', 'visit_ng'], value: ['OK', 'NG'] },

@@ -4,11 +4,6 @@ const RT_model = ['---', '200', '200', '300', '400'];
 const RV_model = ['---', '300', '200', '300', '400'];
 const RX_model = ['---', '400', '200', '300', '400'];
 
-let obj_value = '';
-let sub_object_value = '';
-
-let history = [];
-
 window.addEventListener('load', () => {
   select_create(model_lib, 'farst_model_name');
   create_form('farst_form', farst_lib);
@@ -21,27 +16,24 @@ document.getElementById('create_btn').addEventListener('click', () => { name_get
 document.getElementById('chk_optical_call').addEventListener('change', () => { check_box_chk('chk_optical_call') }, false);
 document.getElementById('chk_failure').addEventListener('change', () => { check_box_chk('chk_failure') }, false);
 
-//nameでvalueを取得
-const name_get_value = () => {
-  for (i = 0, d = all_name_lib.length; i < d; i++) {
-    getting_log = document.getElementsByName(all_name_lib[i]);
-    for (j = 0, dd = getting_log.length; j < dd; j++) {
-      if (dd == 1) {
-        console.log('とった');
-        history[i] = getting_log[j].value;
-      } else if (getting_log[j].checked) {
-        console.log("チェック");
-        history[i] = getting_log[j].value;
-      }
+
+//チェックボックスにチェックが有るか確認
+const check_box_chk = target_id => {
+  let chk_box = document.getElementById(target_id);
+  if (chk_box.checked) {
+    if (target_id == 'chk_optical_call') {
+      tango = document.getElementById('optical_call');
+      create_form('optical_call', optical);
+    } else if (target_id == 'chk_failure') {
+      tango = document.getElementById('optical_call');
+      create_form('failure_area', fault);
+    }
+  } else {
+    console.log('no-check');
+    if (target_id == 'chk_optical_call') {
+      document.getElementById('optical_call').innerHTML = '';
+    } else if (target_id == 'chk_failure') {
+      document.getElementById('failure_area').innerHTML = '';
     }
   }
-  //join
-}
-
-
-
-
-
-const all_his = () => {
-  history[0] = text_value();
 }

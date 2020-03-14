@@ -5,31 +5,6 @@
 const create_form = (target_id, target_lib) => {
   let target = document.getElementById(target_id);
   for (i = 0, d = target_lib.length; i < d; i++) {
-
-    if (target_lib[i][0] == 'text') {
-      let form = document.createElement('form');
-      let input = create_textbox(target_lib[i][1], target_lib[i][2]);
-      form.appendChild(input);
-      target.appendChild(form);
-
-    } else if (target_lib[i][0] == 'radio') {
-      let form = document.createElement('form');
-      let p = document.createElement('p');
-      p.insertAdjacentText('beforeend', target_lib[i][1]);
-      form.appendChild(p);
-      for (key in target_lib[i][3]) {
-        let { input, label } = create_radio(target_lib[i][2], key, target_lib[i][3][key]);
-        form.appendChild(input);
-        form.appendChild(label);
-      }
-      target.appendChild(form);
-    }
-  }
-}
-
-const create_former = (target_id, target_lib) => {
-  let target = document.getElementById(target_id);
-  for (i = 0, d = target_lib.length; i < d; i++) {
     let form = document.createElement('form');
 
     if (target_lib[i]['type'] == 'text') {
@@ -46,7 +21,7 @@ const create_former = (target_id, target_lib) => {
         form.appendChild(input);
         form.appendChild(label);
       }
-
+      target.appendChild(form);
     }
   }
 }

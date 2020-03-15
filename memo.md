@@ -1,12 +1,14 @@
 # メモ
 
-### 宣言の配列について
+## 宣言の配列について
 
-#### textboxとradioのvalueチェックを簡単にするための配列
+### textboxとradioのvalueチェックを簡単にするための配列
 
+```html:sample
 {type : type, label_name: label_name, name : name, id : [id1, id2, id3], value : [value1, value2, value3]}
+```
 
-#### valueをゲットするための備考
+## valueをゲットするための備考
 
 ```html:sample
 for(配列の数繰り返す)
@@ -19,4 +21,10 @@ for(配列の数繰り返す)
       valueをゲット
 ```
 ****
-typeとname or IDだけのリストを作成
+## ToDo
+****
+rooter_lampに他のランプリストを追加。
+
+コピーのボタンを機能させる。
+
+出力される左側のリストを追加、ログと合体。

@@ -12,7 +12,8 @@ window.addEventListener('load', () => {
   document.getElementById('second_model_name').addEventListener('change', change_model, false);
 }, false);
 
-document.getElementById('create_btn').addEventListener('click', () => { name_get_value() }, false);
+document.getElementById('create_btn').addEventListener('click', () => { get_history() }, false);
+document.getElementById('initialise').addEventListener('click', () => { all_clear() }, false);
 document.getElementById('chk_optical_call').addEventListener('change', () => { check_box_chk('chk_optical_call') }, false);
 document.getElementById('chk_failure').addEventListener('change', () => { check_box_chk('chk_failure') }, false);
 
@@ -36,4 +37,9 @@ const check_box_chk = target_id => {
       document.getElementById('failure_area').innerHTML = '';
     }
   }
+}
+
+//画面更新による初期化
+const all_clear = () => {
+  window.location.reload();
 }

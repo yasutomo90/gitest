@@ -1,10 +1,11 @@
 let obj_value = '';
+let main_object_value = '';
 let sub_object_value = '';
 
 //機種のチェック
 const change_select = () => {
-  obj_value = document.getElementById('farst_model_name').value;
-  switch (obj_value) {
+  main_object_value = document.getElementById('farst_model_name').value;
+  switch (main_object_value) {
     case 'PR':
       select_create(PR_model, 'second_model_name');
       break;
@@ -30,29 +31,30 @@ const change_select = () => {
 //型番のチェック
 const change_model = () => {
   sub_object_value = document.getElementById('second_model_name').value;
+  obj_value = main_object_value + sub_object_value;
   switch (sub_object_value) {
     case '100':
       console.log('test1');
-      document.getElementById('radio_area').innerHTML = '';
-      create_form('radio_area', pr600_ki);
+      document.getElementById('radio_right').innerHTML = '';
+      create_form('radio_right', pr600_ki);
       break;
 
     case '200':
       console.log('test2');
-      document.getElementById('radio_area').innerHTML = '';
-      create_form('radio_area', pr600_ki);
+      document.getElementById('radio_right').innerHTML = '';
+      create_form('radio_right', pr600_ki);
       break;
 
     case '300':
       console.log('test3');
-      document.getElementById('radio_area').innerHTML = '';
-      create_form('radio_area', pr600_ki);
+      document.getElementById('radio_right').innerHTML = '';
+      create_form('radio_right', pr600_ki);
       break;
 
     case '400':
       console.log('test4');
-      document.getElementById('radio_area').innerHTML = '';
-      create_form('radio_area', pr600_ki);
+      document.getElementById('radio_right').innerHTML = '';
+      create_form('radio_right', pr600_ki);
       break;
 
     default:

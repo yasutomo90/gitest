@@ -25,8 +25,8 @@ const change_select = () => {
     default:
       console.log('default');
       break;
-  }
-}
+  };
+};
 
 //型番のチェック
 const change_model = () => {
@@ -36,29 +36,29 @@ const change_model = () => {
     case '100':
       console.log('test1');
       document.getElementById('radio_right').innerHTML = '';
-      create_form('radio_right', pr600_ki);
+      create_radio_area(pr600_ki);
       break;
 
     case '200':
       console.log('test2');
       document.getElementById('radio_right').innerHTML = '';
-      create_form('radio_right', pr600_ki);
+      create_radio_area(pr600_ki);
       break;
 
     case '300':
       console.log('test3');
       document.getElementById('radio_right').innerHTML = '';
-      create_form('radio_right', pr600_ki);
+      create_radio_area(pr600_ki);
       break;
 
     case '400':
       console.log('test4');
       document.getElementById('radio_right').innerHTML = '';
-      create_form('radio_right', pr600_ki);
+      create_radio_area(pr600_ki);
       break;
 
     default:
       console.log('default');
       break;
-  }
-}
+  };
+};

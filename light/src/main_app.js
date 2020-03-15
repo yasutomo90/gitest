@@ -28,18 +28,18 @@ const check_box_chk = target_id => {
     } else if (target_id == 'chk_failure') {
       tango = document.getElementById('optical_call');
       create_form('failure_area', fault);
-    }
+    };
   } else {
     console.log('no-check');
     if (target_id == 'chk_optical_call') {
       document.getElementById('optical_call').innerHTML = '';
     } else if (target_id == 'chk_failure') {
       document.getElementById('failure_area').innerHTML = '';
-    }
-  }
-}
+    };
+  };
+};
 
 //画面更新による初期化
 const all_clear = () => {
   window.location.reload();
-}
+};

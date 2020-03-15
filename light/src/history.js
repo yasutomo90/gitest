@@ -46,6 +46,5 @@ const history_format = () => {
     };
   };
   let target = document.getElementById('log');
-  target.value = '';
   target.value = his_ex.join('\r\n');
 };

@@ -2,6 +2,7 @@ let history = [];
 let his_ex = [];
 //getヒストリー
 const push_history = target_lib => {
+  console.log(target_lib);
   for (i = 0, d = target_lib.length; i < d; i++) {
     if (target_lib[i]['type'] == 'text') {
       let temp_id = document.getElementById(target_lib[i]['id']);
@@ -9,9 +10,10 @@ const push_history = target_lib => {
       history.push(temp);
     } else if (target_lib[i]['type'] == 'radio') {
       let target_name = document.getElementsByName(target_lib[i]['name']);
-      for (j = 0, d = target_name.length; j < d; j++) {
+      for (j = 0, dd = target_name.length; j < dd; j++) {
         if (target_name[j].checked) {
           let temp = target_name[j].value;
+          console.log(temp);
           history.push(temp);
         };
       };

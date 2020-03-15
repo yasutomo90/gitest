@@ -5,12 +5,12 @@
 const rooter_power = { type: 'radio', label_text: 'ルーター電源ランプ', name: 'rooter_power_lamp', id: ['rooter_power_lamp_green', 'rooter_power_lamp_black'], value: ['緑点灯', '消灯'] };
 const alarm = { type: 'radio', label_text: 'アラームランプ', name: 'alarm_lamp', id: ['alarm_lamp_red', 'alarm_lamp_red_flash', 'alarm_lamp_black'], value: ['赤点灯', '赤点滅', '消灯'] };
 const ppp = { type: 'radio', label_text: 'PPPランプ', name: 'ppp_lamp', id: ['ppp_lamp_green', 'ppp_lamp_orange', 'ppp_lamp_black'], value: ['緑点灯', '橙点灯', '消灯'] };
-const light_tel = { type: 'radio', label_text: 'ひかり電話ランプ', name: 'light_tel_lamp', id: ['light_tel_lamp_green', 'light_tel_lamp_green_flash', 'light_tel_lamp_black'], value: ['緑点灯', '緑点灯', '消灯'] };
+const light_tel = { type: 'radio', label_text: 'ひかり電話ランプ', name: 'light_tel_lamp', id: ['light_tel_lamp_green', 'light_tel_lamp_green_flash', 'light_tel_lamp_black'], value: ['緑点灯', '緑点滅', '消灯'] };
 const act = { type: 'radio', label_text: 'ACTランプ', name: 'act_lamp', id: ['act_lamp_green', 'act_lamp_green_flash', 'act_lamp_black'], value: ['緑点灯', '緑点滅', '消灯'] };
 const register = { type: 'radio', label_text: '登録ランプ', name: 'register_lamp', id: ['register_lamp_green', 'register_lamp_green_flach', 'register_lamp_red', 'register_lamp_red_flach', 'register_lamp-black'], value: ['緑点灯', '緑点滅', '赤点灯', '赤点滅', '消灯'] };
 const initial = { type: 'radio', label_text: '初期状態ランプ', name: 'initial_lamp', id: ['initial_lamp_orange', 'initial_lamp_flach', 'initial_lamp_black'], value: ['橙点灯', '橙点滅', '消灯'] };
 const option = { type: 'radio', label_text: 'オプションランプ', name: 'option_lamp', id: ['option_lamp_green', 'option_lamp_green_flash', 'option_lamp_blue', 'option_lamp_black'], value: ['緑点灯', '緑点滅', '青3回点滅後、２秒点灯', '消灯'] };
-const Authentication = { radio: 'radio', label_text: '認証ランプ', name: 'Authentication_lamp', id: ['Authentication_lamp_green', 'Authentication_lamp_black'], value: ['緑点灯', '消灯'] };
+const Authentication = { type: 'radio', label_text: '認証ランプ', name: 'Authentication_lamp', id: ['Authentication_lamp_green', 'Authentication_lamp_black'], value: ['緑点灯', '消灯'] };
 const uni = { type: 'radio', label_text: 'UNIランプ', name: 'uni_lamp', id: ['uni_lamp_green', 'uni_lamp_green_flash', 'uni_lamp_black'], value: ['緑点灯', '緑点滅', '消灯'] };
 const optical_line = { type: 'radio', label_text: '光回線ランプ', name: 'optical_line_lamp', id: ['optical_line_lamp_green', 'optical_line_lamp_orange', 'optical_line_lamp_orange_flach', 'optical_line_lamp_black'], value: ['緑点灯', '橙点灯', '橙点滅', '消灯'] };
 const power = { type: 'radio', label_text: '電源ランプ', name: 'power_lamp', id: ['power_lamp_green', 'power_lamp_red', 'power_lamp_red_flash', 'power_lamp_black'], value: ['緑点灯', '赤点灯', '赤点滅', '消灯'] };

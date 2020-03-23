@@ -1,0 +1,80 @@
+body {
+  background: #f6f5f7;
+}
+
+main {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 500px 200px 1fr;
+      grid-template-columns: 200px 500px 200px 1fr;
+  -ms-grid-rows: 100px 50px 50px 400px 100px;
+      grid-template-rows: 100px 50px 50px 400px 100px;
+}
+
+h1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  margin: auto;
+}
+
+#category_area {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  margin: auto;
+}
+
+#counter {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  margin: auto;
+}
+
+#container {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  border: 1px solid #000;
+  border-radius: 20px;
+  position: relative;
+}
+
+#container p {
+  position: absolute;
+  top: 370px;
+  left: 20px;
+}
+
+#container #talk_script p {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#container #talk_script button {
+  position: absolute;
+  top: 320px;
+  left: 400px;
+  border: 2px solid #4497f7;
+  border-radius: 5px;
+  padding: 5px;
+  width: 50px;
+}
+/*# sourceMappingURL=position.css.map */

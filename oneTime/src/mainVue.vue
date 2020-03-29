@@ -8,6 +8,7 @@ const app = new Vue({
     userName: '',
     userId: '',
     telNo: '',
+    timing: '',
     overview: '',
     businessHours: {
       'PCサポート': '営業時間 09:00～21:00  電話番号 xxxx-xxx-xxx',

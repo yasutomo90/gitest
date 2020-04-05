@@ -2,16 +2,68 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Multi Step Form</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>test</title>
+  <link rel="stylesheet" href="/stylle.css">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
+
+
+
   <div id="app">
-    <form-name></form-name>
-    <p>{{ msgTest }}</p>
+
+    <h1>test</h1>
+
+    <!-- ラジオボタン -->
+
+    <div>
+
+      <div>
+        <label v-for="category in categorys"><input type="radio" v-model="categoryPic" :value="category">{{ category }}</label>
+      </div>
+
+      <div v-if="categoryPic === 'テクニカル'">
+        <label v-for="pcRadio in pcRadios"><input type="radio" v-model="categoryValue" :value="pcRadio">{{ pcRadio }}</label>
+      </div>
+
+      <div v-if="categoryPic === 'カスタマー'">
+        <label v-for="csRadio in csRadios"><input type="radio" v-model="categoryValue" :value="csRadio">{{ csRadio }}</label>
+      </div>
+    </div>
+
+
+    <!-- トーク -->
+
+    <div  v-if="categoryValue != null">
+      <h3>{{ categoryValue }}</h3>
+      <pre>{{ opTalk }}</pre>
+    </div>
+
+
+    <!-- ヒアリング -->
+
+    <div v-if="categoryValue != null">
+      <input type="text" v-for="confirm in reception[categoryValue]['confirms']" :placeholder="confirm" v-model="farstForm[confirm]">
+    </div>
+
+
+    <!-- 大項目 -->
+
+    <div v-if="categoryValue != null">
+      <label v-for="question in questions[categoryValue]"><input type="radio" v-model="answer" :value="question">{{ question }}</label>
+    </div>
+
+
+
+    <div>
+        <p>　ユーザーＩＤ：{{farstForm.userId}}</p>
+        <p>ユーザーネーム：{{farstForm.userName}}</p>
+        <p>　　　電話番号：{{farstForm.tel}}</p>
+    </div>
+
+
+
   </div>
-  <!-- <script src="vue_test\src\vue.js"></script> -->
   <script src="oneTime/src/mainVue.js"></script>
 </body>
 </html>

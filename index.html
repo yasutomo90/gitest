@@ -15,9 +15,7 @@
     <h1>test</h1>
 
     <!-- ラジオボタン -->
-
     <div>
-
       <div>
         <label v-for="category in categorys"><input type="radio" v-model="categoryPic" :value="category">{{ category }}</label>
       </div>
@@ -33,7 +31,6 @@
 
 
     <!-- トーク -->
-
     <div  v-if="categoryValue != null">
       <h3>{{ categoryValue }}</h3>
       <pre>{{ opTalk }}</pre>
@@ -41,24 +38,24 @@
 
 
     <!-- ヒアリング -->
-
     <div v-if="categoryValue != null">
       <input type="text" v-for="confirm in reception[categoryValue]['confirms']" :placeholder="confirm" v-model="farstForm[confirm]">
     </div>
 
 
     <!-- 大項目 -->
-
     <div v-if="categoryValue != null">
       <label v-for="question in questions[categoryValue]"><input type="radio" v-model="answer" :value="question">{{ question }}</label>
     </div>
 
 
+    
 
     <div>
         <p>　ユーザーＩＤ：{{farstForm.userId}}</p>
         <p>ユーザーネーム：{{farstForm.userName}}</p>
         <p>　　　電話番号：{{farstForm.tel}}</p>
+        <p>　　　ナンバー：{{farstForm.number}}</p>
     </div>
 
 

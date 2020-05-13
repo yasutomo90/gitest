@@ -32,3 +32,43 @@ ritwickdey.live-sass
 ritwickdey.LiveServer
 shardulm94.trailing-spaces
 Zignd.html-css-class-completion
+
+
+https://readouble.com/larabel/6.x/ja/
+
+
+
+config > app.phpのデバッグをtrue
+
+php artisan make:migration  create_categories_table
+php artisan make:migration  create_posts_table
+php artisan make:migration  create_comments_table
+
+マイグレーションでテーブル作成
+ファイルに記入していく
+
+
+php artisan migrate
+
+
+php artisan make:seeder CategoriesTableSeeder
+
+php artisan db:seed
+
+
+php artisan make:model Category
+php artisan make:model Post
+php artisan make:model Comment
+
+
+
+php artisan make:auth
+
+
+
+php artisan route:list
+
+
+
+
+php artisan make:contoroller PostContoroller --resource

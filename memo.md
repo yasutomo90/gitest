@@ -36,7 +36,7 @@ Zignd.html-css-class-completion
 
 https://readouble.com/larabel/6.x/ja/
 
-
+composer install
 
 config > app.phpのデバッグをtrue
 

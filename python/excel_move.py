@@ -8,8 +8,11 @@ if __name__ == '__main__':
 
     # print(sheet_names)
 
-    sheet1 = sheet_names[0]
-    sheet2 = sheet_names[1]
+    column_date  = 5
+
+
+    sheet1 = book[sheet_names[0]]
+    sheet2 = book[sheet_names[1]]
 
     # pprint.pprint(list(book[sheet1].values))
 
@@ -30,7 +33,7 @@ if __name__ == '__main__':
 
     for i, row in enumerate(input_text,1):
         print(i,row)
-        book[sheet2].cell( i, 5).value = row
+        sheet2.cell( i, column_date).value = row
 
 
     book.save('example.xlsx')

@@ -10,13 +10,10 @@ if __name__ == '__main__':
 
     column_date  = 5
 
+    sheet_name1 = 'テスト　太郎'
 
-    sheet1 = book[sheet_names[0]]
+    sheet1 = book[sheet_name1]
     sheet2 = book[sheet_names[1]]
-
-    # pprint.pprint(list(book[sheet1].values))
-
-
     text = """21:29 2020/05/22
 テスト　太郎
 項目1
@@ -28,12 +25,13 @@ if __name__ == '__main__':
 55件
 45件"""
 
+    pprint.pprint(list(sheet1.values))
+
     input_text = text.splitlines()
     # print(input_text)
 
     for i, row in enumerate(input_text,1):
         print(i,row)
         sheet2.cell( i, column_date).value = row
-
 
     book.save('example.xlsx')

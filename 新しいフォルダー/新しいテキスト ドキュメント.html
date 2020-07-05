@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+
+  <div id="app">
+
+      <label v-for="author in authors"></label><input type="radio" v-model="checkName" :value="author.name">{{ author.name }}</label>
+    <p>{{ checkName }}</p>
+  </div>
+  <script>
+
+    new Vue({
+      el: '#app',
+      data: {
+        checkName: '選択して下さい',
+        authors: [
+          { id: 1, name: '夏目漱石' },
+          { id: 2, name: '太宰治' },
+          { id: 3, name: '村上春樹' }
+        ]
+      }
+    });
+  </script>
+</body>
+</html>

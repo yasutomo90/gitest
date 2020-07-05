@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login_form/css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">
+    <h2>Login</h2>
+    <form>
+      <div class="input_box">
+        <input type="text" id="user" required="">
+        <label>User Name</label>
+      </div>
+      <div class="input_box">
+        <input type="password" id="pass" required="">
+        <label>password</label>
+      </div>
+      <button id="push_btn">ログイン</button>
+    </form>
+  </div>
+  <script type="text/javascript">
+    let btn = document.getElementById('push_btn');
+    btn.addEventListener('click', () => {
+      let moving = document.getElementById('pass').value;
+      location.href = 'test/' + moving + '.html';
+    }, false);
+  </script>
+</body>
+</html>

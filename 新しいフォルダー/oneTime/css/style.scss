@@ -1,0 +1,78 @@
+h1 {
+  margin: auto;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
+  grid-template-rows: 50px 50px 300px 100px;
+  justify-content: center;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+
+#app #farst_radio {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+#app #second_radio {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+#out_form {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  height: 300px;
+
+  h3 {
+    margin: 10px auto;
+  }
+
+  p {
+    text-align: left;
+    margin-left: 40px;
+  }
+
+  input[type="text"] {
+    margin: 10px auto;
+    display: block;
+  }
+}
+
+#footForm {
+  position: relative;
+  grid-column: 2/3;
+  grid-row: 4/5;
+
+  #button_area {
+    position: absolute;
+    top: 150px;
+    left: 0;
+
+    #backbtn {
+      width: 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #nextbtn {
+      width: 50px;
+      position: absolute;
+      top: 0;
+      left: 300px;
+    }
+  }
+
+  #bottom_text {
+    position: absolute;
+    top: 200px;
+    left: 0;
+  }
+}

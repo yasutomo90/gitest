@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\PostReuest;
+
 use App\Post;
+use App\Tag;
 
 class PostController extends Controller
 {
@@ -14,11 +17,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        $Posts = Post::All();
+        $posts = Post::All();
+        $posts->load('category', 'user');
 
-        return view('posts.index',[
+        return view('posts.index', [
             'posts' => $posts,
-            // 'search_result' => $search_result
         ]);
     }
 
@@ -49,9 +52,15 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
-        //
+
+        $posts->load('category', 'user');
+
+        return view('posts.show', [
+            'posts' => $posts,
+        ]);
+
     }
 
     /**

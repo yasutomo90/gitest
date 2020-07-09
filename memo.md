@@ -50,3 +50,7 @@ php artisan make:contoroller PostContoroller --resource
 
 
 <!-- https://developer.cybozu.io/hc/ja/community/posts/360042799572-%E5%88%A5%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E3%83%9E%E3%82%B9%E3%82%BF%E3%81%A8%E3%81%97%E3%81%A6-%E8%A4%87%E6%95%B0%E3%81%AE%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E3%83%80%E3%82%A6%E3%83%B3%E3%81%AE%E8%A1%A8%E7%A4%BA%E5%86%85%E5%AE%B9%E3%82%92%E9%80%A3%E5%8B%95%E3%81%95%E3%81%9B%E3%82%8B -->
+
+
+ワードプレスの階層
+https://wpdocs.osdn.jp/wiki/images/wp-template-hierarchy.jpg

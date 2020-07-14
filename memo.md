@@ -54,3 +54,10 @@ php artisan make:contoroller PostContoroller --resource
 
 ワードプレスの階層
 https://wpdocs.osdn.jp/wiki/images/wp-template-hierarchy.jpg
+
+
+
+
+cocoon
+
+xeory

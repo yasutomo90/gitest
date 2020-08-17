@@ -1,5 +1,0 @@
-'''
-<Response [200]>
-[{'message_id': '1323552303256436736', 'account': {'account_id': 4958093, 'name': 'ヤス\u3000トモ', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/ico_default_yellow.png'}, 'body': '[info][title][dtext:chatroom_groupchat_created][/title][dtext:chatroom_chatname_is]testチャット[dtext:chatroom_set]\n\n[dtext:chatroom_description_is] ててて [dtext:chatroom_set]\n\n[dtext:chatroom_member_is][piconname:4958093][dtext:chatroom_added][/info]', 'send_time': 1592033059, 'update_time': 0}, {'message_id': '1323653692238331904', 'account': {'account_id': 4958093, 'name': 'ヤス\u3000トモ', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/ico_default_yellow.png'}, 'body': 'test', 'send_time': 1592057232, 'update_time': 0}, {'message_id': '1323880518311256064', 'account': {'account_id': 4958093, 'name': 'ヤス\u3000トモ', 'avatar_image_url': 'https://appdata.chatwork.com/avatar/ico_default_yellow.png'}, 'body': 'aaa', 'send_time': 1592111312, 'update_time': 0}]
-[info][title][dtext:chatroom_groupchat_created][/title][dtext:chatroom_chatname_is]testチャット[dtext:chatroom_set]
-'''
